@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>ส่วนที่ 4 : สถานะผู้ปกครอง</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--------------------- เริ่มต้น ส่วนที่ 1 : สถานะภาพของบิดา-มารดา ------------------->
+<ion-content>
+  <br>
+  <ion-card color="primary">
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-col col-3>
+          <ion-label><b>สถานะภาพของบิดา-มารดา</b></ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <br>
+  <!-- 01 : start dropdow status -->
+  <ion-item>
+    <ion-label>สถานะ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="อยู่ด้วยกัน">อยู่ร่วมกัน</ion-select-option>
+      <ion-select-option value="หย่าร้าง">หย่าร้าง</ion-select-option>
+      <ion-select-option value="อื่น ๆ">อื่น ๆ</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 01 : end dropdow status -->
+
+  <br>
+  <!-- 02 : start input earnings -->
+  <ion-item>
+    <ion-label position="floating">รายได้ครอบครัวต่อเดือน</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 02 : end input earnings -->
+  <!--------------------- สิ้นสุด ส่วนที่ 1 : สถานะภาพของบิดา-มารดา ------------------->
+
+  <!--------------------- เริ่มต้น ส่วนที่ 2: ผู้ที่นำนักเรียนมาสมัครเรียน ------------------->
+  <br>
+  <ion-card color="primary">
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-col col-3>
+          <ion-label><b>ผู้ที่นำนักเรียนมาสมัครเรียน</b></ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <br>
+  <!-- 01 : start dropdow Name Title -->
+  <ion-item>
+    <ion-label>คำนำหน้าชื่อ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="นาย">นาย</ion-select-option>
+      <ion-select-option value="นางสาว">นางสาว</ion-select-option>
+      <ion-select-option value="นาง">นาง</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 01 : end dropdow Name Title -->
+
+  <br>
+  <!-- 02 : start input Fristname and Lastname -->
+  <ion-item>
+    <ion-label position="floating">ชื่อ - นามสกุล</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 02 : end input Fristname and Lastname -->
+
+  <br>
+  <!-- 03 : start input Phone number -->
+  <ion-item>
+    <ion-label position="floating">เบอร์โทรศัพท์ติดต่อ</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 03 : end input Phone number -->
+
+  <br>
+  <!-- 04 : start input Relevance -->
+  <ion-item>
+    <ion-label position="floating">เกี่ยวข้องเป็น</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 04 : end input Relevance -->
+  <br>
+  <!--------------------- เริ่มต้น ส่วนที่ 2: ผู้ที่นำนักเรียนมาสมัครเรียน ------------------->
+
+  <br>
+  <!--  strat button save-->
+  <ion-item> 
+    <ion-grid>
+   <ion-row>
+      <!-- strat button back -->
+          <ion-col class="startp" align-items-start>
+          <ion-button type="submit" name="button" id="button_backend" size="Default" color="medium" routerLink="/form">ย้อนกลับ</ion-button>
+          </ion-col>
+      <!-- strat button back -->
+
+        <!-- strat button next -->
+          <ion-col col-12> </ion-col>
+          <ion-col col-12> </ion-col>
+          <ion-col class="startp" align-self-end>
+          <ion-button type="submit" name="button" id="button_nextform" size="Default" color="success" routerLink="/list">บันทึก</ion-button>
+        </ion-col>
+        <!-- strat button next -->
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <!--  end button save-->
+
+
+</ion-content>

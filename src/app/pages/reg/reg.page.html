@@ -1,0 +1,325 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>ส่วนที่ 2 : ที่อยู่ </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- --------------------Strat ที่อยู่ตามทะเบียนบ้าน-------------------------- -->
+<ion-content>
+  <br>
+  <ion-card color="primary">
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-col col-2>
+          <ion-label><b>ที่อยู่ตามทะเบียนบ้าน</b></ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- 01 : start input Home number -->
+  <ion-item>
+    <ion-label position="floating">บ้านเลขที่</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 01 : end input Home number -->
+
+  <br>
+  <!-- 02 : start input Village number -->
+  <ion-item>
+    <ion-label position="floating">หมู่ที่</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 02 : end input Village number -->
+
+  <br>
+  <!-- 03 : start input Road -->
+  <ion-item>
+    <ion-label position="floating">ถนน</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 03 : end input Road -->
+
+  <br>
+  <!-- 04 : start input district -->
+  <ion-item>
+    <ion-label position="floating">ตำบล</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 04 : end input district -->
+
+  <br>
+  <!-- 05 : start input prefecture -->
+  <ion-item>
+    <ion-label position="floating">อำเภอ</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 05 : end input prefecture -->
+
+  <br>
+  <!-- 06 : start dropdow province -->
+  <ion-item>
+    <ion-label>จังหวัด</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="กรุงเทพมหานคร">กรุงเทพมหานคร</ion-select-option>
+      <ion-select-option value="สมุทรปราการ">สมุทรปราการ</ion-select-option>
+      <ion-select-option value="นนทบุรี">นนทบุรี</ion-select-option>
+      <ion-select-option value="กำแพงเพชร">กำแพงเพชร</ion-select-option>
+      <ion-select-option value="ชัยนาท">ชัยนาท</ion-select-option>
+      <ion-select-option value="นครนายก">นครนายก</ion-select-option>
+      <ion-select-option value="นครปฐม">นครปฐม</ion-select-option>
+      <ion-select-option value="นครสวรรค์">นครสวรรค์</ion-select-option>
+      <ion-select-option value="ปทุมธานี">ปทุมธานี</ion-select-option>
+      <ion-select-option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</ion-select-option>
+      <ion-select-option value="พิจิตร">พิจิตร</ion-select-option>
+      <ion-select-option value="พิษณุโลก">พิษณุโลก</ion-select-option>
+      <ion-select-option value="เพชรบูรณ์">เพชรบูรณ์</ion-select-option>
+      <ion-select-option value="ลพบุรี">ลพบุรี</ion-select-option>
+      <ion-select-option value="สมุทรสาคร">สมุทรสาคร</ion-select-option>
+      <ion-select-option value="สมุทรสงคราม">สมุทรสงคราม</ion-select-option>
+      <ion-select-option value="สิงห์บุรี">สิงห์บุรี</ion-select-option>
+      <ion-select-option value="สุโขทัย">สุโขทัย</ion-select-option>
+      <ion-select-option value="สุพรรณบุรี">สุพรรณบุรี</ion-select-option>
+      <ion-select-option value="สระบุรี">สระบุรี</ion-select-option>
+      <ion-select-option value="อ่างทอง">อ่างทอง</ion-select-option>
+      <ion-select-option value="อุทัยธานี">อุทัยธานี</ion-select-option>
+      <ion-select-option value="เชียงราย">เชียงราย</ion-select-option>
+      <ion-select-option value="เชียงใหม่">เชียงใหม่</ion-select-option>
+      <ion-select-option value="น่าน">น่าน</ion-select-option>
+      <ion-select-option value="พะเยา">พะเยา</ion-select-option>
+      <ion-select-option value="แพร่">แพร่</ion-select-option>
+      <ion-select-option value="แม่ฮ่องสอน">แม่ฮ่องสอน</ion-select-option>
+      <ion-select-option value="ลำปาง">ลำปาง</ion-select-option>
+      <ion-select-option value="ลำพูน">ลำพูน</ion-select-option>
+      <ion-select-option value="อุตรดิตถ์">อุตรดิตถ์</ion-select-option>
+      <ion-select-option value="กาฬสินธุ์">กาฬสินธุ์</ion-select-option>
+      <ion-select-option value="ขอนแก่น">ขอนแก่น</ion-select-option>
+      <ion-select-option value="ชัยภูมิ">ชัยภูมิ</ion-select-option>
+      <ion-select-option value="นครพนม">นครพนม</ion-select-option>
+      <ion-select-option value="นครราชสีมา">นครราชสีมา</ion-select-option>
+      <ion-select-option value="บึงกาฬ">บึงกาฬ</ion-select-option>
+      <ion-select-option value="บุรีรัมย์">บุรีรัมย์</ion-select-option>
+      <ion-select-option value="มหาสารคาม">มหาสารคาม</ion-select-option>
+      <ion-select-option value="มุกดาหาร">มุกดาหาร</ion-select-option>
+      <ion-select-option value="ยโสธร">ยโสธร</ion-select-option>
+      <ion-select-option value="ร้อยเอ็ด">ร้อยเอ็ด</ion-select-option>
+      <ion-select-option value="เลย">เลย</ion-select-option>
+      <ion-select-option value="สกลนคร">สกลนคร</ion-select-option>
+      <ion-select-option value="สุรินทร์">สุรินทร์</ion-select-option>
+      <ion-select-option value="ศรีสะเกษ">ศรีสะเกษ</ion-select-option>
+      <ion-select-option value="หนองคาย">หนองคาย</ion-select-option>
+      <ion-select-option value="หนองบัวลำภู">หนองบัวลำภู</ion-select-option>
+      <ion-select-option value="อุดรธานี">อุดรธานี</ion-select-option>
+      <ion-select-option value="อุบลราชธานี">อุบลราชธานี</ion-select-option>
+      <ion-select-option value="อำนาจเจริญ">อำนาจเจริญ</ion-select-option>
+      <ion-select-option value="จันทบุรี">จันทบุรี</ion-select-option>
+      <ion-select-option value="ฉะเชิงเทรา">ฉะเชิงเทรา</ion-select-option>
+      <ion-select-option value="ชลบุรี">ชลบุรี</ion-select-option>
+      <ion-select-option value="ตราด">ตราด</ion-select-option>
+      <ion-select-option value="ปราจีนบุรี">ปราจีนบุรี</ion-select-option>
+      <ion-select-option value="ระยอง">ระยอง</ion-select-option>
+      <ion-select-option value="สระแก้ว">สระแก้ว</ion-select-option>
+      <ion-select-option value="กาญจนบุรี">กาญจนบุรี</ion-select-option>
+      <ion-select-option value="ตาก">ตาก</ion-select-option>
+      <ion-select-option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</ion-select-option>
+      <ion-select-option value="เพชรบุรี">เพชรบุรี</ion-select-option>
+      <ion-select-option value="ราชบุรี">ราชบุรี</ion-select-option>
+      <ion-select-option value="กระบี่">กระบี่</ion-select-option>
+      <ion-select-option value="ชุมพร">ชุมพร</ion-select-option>
+      <ion-select-option value="ตรัง">ตรัง</ion-select-option>
+      <ion-select-option value="นครศรีธรรมราช">นครศรีธรรมราช</ion-select-option>
+      <ion-select-option value="นราธิวาส">นราธิวาส</ion-select-option>
+      <ion-select-option value="ปัตตานี">ปัตตานี</ion-select-option>
+      <ion-select-option value="พังงา">พังงา</ion-select-option>
+      <ion-select-option value="พัทลุง">พัทลุง</ion-select-option>
+      <ion-select-option value="ภูเก็ต">ภูเก็ต</ion-select-option>
+      <ion-select-option value="ระนอง">ระนอง</ion-select-option>
+      <ion-select-option value="สตูล">สตูล</ion-select-option>
+      <ion-select-option value="สงขลา">สงขลา</ion-select-option>
+      <ion-select-option value="สุราษฎร์ธานี">สุราษฎร์ธานี</ion-select-option>
+      <ion-select-option value="ยะลา">ยะลา</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 06 : end dropdow province -->
+
+  <br>
+  <!-- 07 : start input postal code -->
+  <ion-item>
+    <ion-label position="floating">รหัสไปรษณีย์</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+ 
+  <!-- 07 : end input postal code -->
+
+  <!-- --------------------End ที่อยู่ตามทะเบียนบ้าน-------------------------- -->
+
+  <!-- --------------------Strat ที่อยู่ปัจจุบัน ------------------------------ -->
+  <br>
+  <ion-card color="primary">
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-col col-2>
+          <ion-label><b>ที่อยู่ปัจจุบัน</b></ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- 08 : start input Home number -->
+  <ion-item>
+    <ion-label position="floating">บ้านเลขที่</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 08 : end input Home number -->
+
+  <br>
+  <!-- 09 : start input Village number -->
+  <ion-item>
+    <ion-label position="floating">หมู่ที่</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 09 : end input Village number -->
+
+  <br>
+  <!-- 10 : start input Road -->
+  <ion-item>
+    <ion-label position="floating">ถนน</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 10 : end input Road -->
+
+  <br>
+  <!-- 11 : start input district -->
+  <ion-item>
+    <ion-label position="floating">ตำบล</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 11 : end input district -->
+
+  <br>
+  <!-- 12 : start input prefecture -->
+  <ion-item>
+    <ion-label position="floating">อำเภอ</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 12 : end input prefecture -->
+
+  <br>
+  <!-- 13 : start dropdow province -->
+  <ion-item>
+    <ion-label>จังหวัด</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="กรุงเทพมหานคร">กรุงเทพมหานคร</ion-select-option>
+      <ion-select-option value="สมุทรปราการ">สมุทรปราการ</ion-select-option>
+      <ion-select-option value="นนทบุรี">นนทบุรี</ion-select-option>
+      <ion-select-option value="กำแพงเพชร">กำแพงเพชร</ion-select-option>
+      <ion-select-option value="ชัยนาท">ชัยนาท</ion-select-option>
+      <ion-select-option value="นครนายก">นครนายก</ion-select-option>
+      <ion-select-option value="นครปฐม">นครปฐม</ion-select-option>
+      <ion-select-option value="นครสวรรค์">นครสวรรค์</ion-select-option>
+      <ion-select-option value="ปทุมธานี">ปทุมธานี</ion-select-option>
+      <ion-select-option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</ion-select-option>
+      <ion-select-option value="พิจิตร">พิจิตร</ion-select-option>
+      <ion-select-option value="พิษณุโลก">พิษณุโลก</ion-select-option>
+      <ion-select-option value="เพชรบูรณ์">เพชรบูรณ์</ion-select-option>
+      <ion-select-option value="ลพบุรี">ลพบุรี</ion-select-option>
+      <ion-select-option value="สมุทรสาคร">สมุทรสาคร</ion-select-option>
+      <ion-select-option value="สมุทรสงคราม">สมุทรสงคราม</ion-select-option>
+      <ion-select-option value="สิงห์บุรี">สิงห์บุรี</ion-select-option>
+      <ion-select-option value="สุโขทัย">สุโขทัย</ion-select-option>
+      <ion-select-option value="สุพรรณบุรี">สุพรรณบุรี</ion-select-option>
+      <ion-select-option value="สระบุรี">สระบุรี</ion-select-option>
+      <ion-select-option value="อ่างทอง">อ่างทอง</ion-select-option>
+      <ion-select-option value="อุทัยธานี">อุทัยธานี</ion-select-option>
+      <ion-select-option value="เชียงราย">เชียงราย</ion-select-option>
+      <ion-select-option value="เชียงใหม่">เชียงใหม่</ion-select-option>
+      <ion-select-option value="น่าน">น่าน</ion-select-option>
+      <ion-select-option value="พะเยา">พะเยา</ion-select-option>
+      <ion-select-option value="แพร่">แพร่</ion-select-option>
+      <ion-select-option value="แม่ฮ่องสอน">แม่ฮ่องสอน</ion-select-option>
+      <ion-select-option value="ลำปาง">ลำปาง</ion-select-option>
+      <ion-select-option value="ลำพูน">ลำพูน</ion-select-option>
+      <ion-select-option value="อุตรดิตถ์">อุตรดิตถ์</ion-select-option>
+      <ion-select-option value="กาฬสินธุ์">กาฬสินธุ์</ion-select-option>
+      <ion-select-option value="ขอนแก่น">ขอนแก่น</ion-select-option>
+      <ion-select-option value="ชัยภูมิ">ชัยภูมิ</ion-select-option>
+      <ion-select-option value="นครพนม">นครพนม</ion-select-option>
+      <ion-select-option value="นครราชสีมา">นครราชสีมา</ion-select-option>
+      <ion-select-option value="บึงกาฬ">บึงกาฬ</ion-select-option>
+      <ion-select-option value="บุรีรัมย์">บุรีรัมย์</ion-select-option>
+      <ion-select-option value="มหาสารคาม">มหาสารคาม</ion-select-option>
+      <ion-select-option value="มุกดาหาร">มุกดาหาร</ion-select-option>
+      <ion-select-option value="ยโสธร">ยโสธร</ion-select-option>
+      <ion-select-option value="ร้อยเอ็ด">ร้อยเอ็ด</ion-select-option>
+      <ion-select-option value="เลย">เลย</ion-select-option>
+      <ion-select-option value="สกลนคร">สกลนคร</ion-select-option>
+      <ion-select-option value="สุรินทร์">สุรินทร์</ion-select-option>
+      <ion-select-option value="ศรีสะเกษ">ศรีสะเกษ</ion-select-option>
+      <ion-select-option value="หนองคาย">หนองคาย</ion-select-option>
+      <ion-select-option value="หนองบัวลำภู">หนองบัวลำภู</ion-select-option>
+      <ion-select-option value="อุดรธานี">อุดรธานี</ion-select-option>
+      <ion-select-option value="อุบลราชธานี">อุบลราชธานี</ion-select-option>
+      <ion-select-option value="อำนาจเจริญ">อำนาจเจริญ</ion-select-option>
+      <ion-select-option value="จันทบุรี">จันทบุรี</ion-select-option>
+      <ion-select-option value="ฉะเชิงเทรา">ฉะเชิงเทรา</ion-select-option>
+      <ion-select-option value="ชลบุรี">ชลบุรี</ion-select-option>
+      <ion-select-option value="ตราด">ตราด</ion-select-option>
+      <ion-select-option value="ปราจีนบุรี">ปราจีนบุรี</ion-select-option>
+      <ion-select-option value="ระยอง">ระยอง</ion-select-option>
+      <ion-select-option value="สระแก้ว">สระแก้ว</ion-select-option>
+      <ion-select-option value="กาญจนบุรี">กาญจนบุรี</ion-select-option>
+      <ion-select-option value="ตาก">ตาก</ion-select-option>
+      <ion-select-option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</ion-select-option>
+      <ion-select-option value="เพชรบุรี">เพชรบุรี</ion-select-option>
+      <ion-select-option value="ราชบุรี">ราชบุรี</ion-select-option>
+      <ion-select-option value="กระบี่">กระบี่</ion-select-option>
+      <ion-select-option value="ชุมพร">ชุมพร</ion-select-option>
+      <ion-select-option value="ตรัง">ตรัง</ion-select-option>
+      <ion-select-option value="นครศรีธรรมราช">นครศรีธรรมราช</ion-select-option>
+      <ion-select-option value="นราธิวาส">นราธิวาส</ion-select-option>
+      <ion-select-option value="ปัตตานี">ปัตตานี</ion-select-option>
+      <ion-select-option value="พังงา">พังงา</ion-select-option>
+      <ion-select-option value="พัทลุง">พัทลุง</ion-select-option>
+      <ion-select-option value="ภูเก็ต">ภูเก็ต</ion-select-option>
+      <ion-select-option value="ระนอง">ระนอง</ion-select-option>
+      <ion-select-option value="สตูล">สตูล</ion-select-option>
+      <ion-select-option value="สงขลา">สงขลา</ion-select-option>
+      <ion-select-option value="สุราษฎร์ธานี">สุราษฎร์ธานี</ion-select-option>
+      <ion-select-option value="ยะลา">ยะลา</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 13 : end dropdow province -->
+
+  <br>
+  <!-- 14 : start input postal code -->
+  <ion-item>
+    <ion-label position="floating">รหัสไปรษณีย์</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 14 : end input postal code -->
+  <!-- --------------------End ที่อยู่ปัจจุบัน ------------------------------ -->
+
+  <br>
+  <!--  strat button save-->
+  <ion-item> 
+    <ion-grid>
+   <ion-row>
+      <!-- strat button back -->
+          <ion-col class="startp" align-items-start>
+          <ion-button type="submit" name="button" id="button_backend" size="Default" color="medium" routerLink="/end">ย้อนกลับ</ion-button>
+          </ion-col>
+      <!-- strat button back -->
+
+        <!-- strat button next -->
+          <ion-col col-12> </ion-col>
+          <ion-col col-12> </ion-col>
+          <ion-col class="startp" align-self-end>
+          <ion-button type="submit" name="button" id="button_nextform" size="Default" color="primary" routerLink="/form">ถัดไป</ion-button>
+        </ion-col>
+        <!-- strat button next -->
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <!--  end button save-->
+
+</ion-content>

@@ -1,0 +1,353 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>ส่วนที่ 3 : ข้อมูลผู้ปกครอง</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- -------------------เริ่มต้น ส่วนที่ 1: ข้อมูลของบิดา----------------------------- -->
+  <br>
+  <ion-card color="primary">
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-col col-3>
+          <ion-label><b>บิดา</b></ion-label>
+        </ion-col>
+        <ion-col col-12> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <br>
+  <!-- 01 : start dropdow Name Title -->
+  <ion-item>
+    <ion-label>คำนำหน้าชื่อ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="นาย">นาย</ion-select-option>
+      <ion-select-option value="นางสาว">นางสาว</ion-select-option>
+      <ion-select-option value="นาง">นาง</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 01 : end dropdow Name Title -->
+
+  <br>
+  <!-- 02 : start input Fristname thai -->
+  <ion-item>
+    <ion-label position="floating">ชื่อ (ภาษาไทย)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 02 : end input Fristname thai -->
+
+  <br>
+  <!-- 03 : start input Lastname thai -->
+  <ion-item>
+    <ion-label position="floating">นามสกุล (ภาษาไทย)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 03 : end input Lastname thai -->
+
+  <br>
+  <!-- 04 : start input Fristname english -->
+  <ion-item>
+    <ion-label position="floating">ชื่อ (ภาษาอังกฤษ)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 04 : end input Fristname english -->
+
+  <br>
+  <!-- 05 : start input Lastname english -->
+  <ion-item>
+    <ion-label position="floating">นามสกุล (ภาษาอังกฤษ)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 05 : end input Lastname english -->
+
+  <br>
+  <!-- 06 : start input ID card -->
+  <ion-item>
+    <ion-label position="floating">เลขบัตรประชาชน</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 06 : end input ID card -->
+
+  <br>
+  <!-- 07 : start Date -->
+  <ion-item>
+    <ion-label>วัน/เดือน/ปีเกิด</ion-label>
+    <div class="input-group date" data-provide="datepicker">
+      <input type="date" class="form-control">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+      </div>
+    </div>
+  </ion-item>
+  <!-- 07 : end Date -->
+
+  <br>
+  <!-- 08 : start dropdow nationality -->
+  <ion-item>
+    <ion-label>สัญชาติ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="ไทย_nat">ไทย</ion-select-option>
+      <ion-select-option value="ลาว_nat">ลาว</ion-select-option>
+      <ion-select-option value="เวียดนาม_nat">เวียดนาม</ion-select-option>
+      <ion-select-option value="กัมพูชา_nat">กัมพูชา</ion-select-option>
+      <ion-select-option value="มาเลเชีย_nat">มาเลเชีย</ion-select-option>
+      <ion-select-option value="สิงค์โปร์_nat">สิงค์โปร์</ion-select-option>
+      <ion-select-option value="จีน_nat">จีน</ion-select-option>
+      <ion-select-option value="อินเดีย_nat">อินเดีย</ion-select-option>
+      <ion-select-option value="เนปาล_nat">เนปาล</ion-select-option>
+      <ion-select-option value="ญี่ปุ่น_nat">ญี่ปุ่น</ion-select-option>
+      <ion-select-option value="อาร์เจนตินา_nat">อาร์เจนตินา</ion-select-option>
+      <ion-select-option value="สหรัฐอเมริกา_nat">สหรัฐอเมริกา</ion-select-option>
+      <ion-select-option value="ออสเตรเลีย_nat">ออสเตรเลีย</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 08 : end dropdow nationality -->
+
+  <br>
+  <!-- 09 : start dropdow race -->
+  <ion-item>
+    <ion-label>เชื้อชาติ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="ไทย_race">ไทย</ion-select-option>
+      <ion-select-option value="ลาว_race">ลาว</ion-select-option>
+      <ion-select-option value="เวียดนาม_race">เวียดนาม</ion-select-option>
+      <ion-select-option value="กัมพูชา_race">กัมพูชา</ion-select-option>
+      <ion-select-option value="มาเลเชีย_race">มาเลเชีย</ion-select-option>
+      <ion-select-option value="สิงค์โปร์_race">สิงค์โปร์</ion-select-option>
+      <ion-select-option value="จีน_race">จีน</ion-select-option>
+      <ion-select-option value="อินเดีย_race">อินเดีย</ion-select-option>
+      <ion-select-option value="เนปาล_race">เนปาล</ion-select-option>
+      <ion-select-option value="ญี่ปุ่น_race">ญี่ปุ่น</ion-select-option>
+      <ion-select-option value="อาร์เจนตินา_race">อาร์เจนตินา</ion-select-option>
+      <ion-select-option value="สหรัฐอเมริกา_race">สหรัฐอเมริกา</ion-select-option>
+      <ion-select-option value="ออสเตรเลีย_race">ออสเตรเลีย</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 09 : end dropdow race -->
+
+  <br>
+  <!-- 10 : start dropdow Religion -->
+  <ion-item>
+    <ion-label>ศาสนา</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="พุทธ">พุทธ</ion-select-option>
+      <ion-select-option value="คริสต์">คริสต์</ion-select-option>
+      <ion-select-option value="อิสลาม">อิสลาม</ion-select-option>
+      <ion-select-option value="ซิกข์">ซิกข์</ion-select-option>
+      <ion-select-option value="ฮินดู">ฮินดู</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 10 : end dropdow Religion -->
+
+  <br>
+  <!-- 11 : start input Phone number -->
+  <ion-item>
+    <ion-label position="floating">เบอร์โทรศัพท์</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 11 : end input Phone number -->
+
+  <br>
+  <!-- 12 : start input careerr -->
+  <ion-item>
+    <ion-label position="floating">อาชีพ</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 12 : end input careerr -->
+
+  <br>
+  <!-- 13 : start input earnings -->
+  <ion-item>
+    <ion-label position="floating">รายได้ (ต่อเดือน)</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 13 : end input earnings -->
+  <!-- -------------------สิ้นสุด ส่วนที่ 1: ข้อมูลของบิดา----------------------------- -->
+
+  <!-- -------------------เริ่มต้น ส่วนที่ 2: ข้อมูลของมารดา----------------------------- -->
+  <br>
+  <ion-card color="primary">
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-col col-3>
+          <ion-label><b>มารดา</b></ion-label>
+        </ion-col>
+        <ion-col col-12> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <br>
+  <!-- 01 : start dropdow Name Title -->
+  <ion-item>
+    <ion-label>คำนำหน้าชื่อ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="นาย">นาย</ion-select-option>
+      <ion-select-option value="นางสาว">นางสาว</ion-select-option>
+      <ion-select-option value="นาง">นาง</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 01 : end dropdow Name Title -->
+
+  <br>
+  <!-- 02 : start input Fristname thai -->
+  <ion-item>
+    <ion-label position="floating">ชื่อ (ภาษาไทย)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 02 : end input Fristname thai -->
+
+  <br>
+  <!-- 03 : start input Lastname thai -->
+  <ion-item>
+    <ion-label position="floating">นามสกุล (ภาษาไทย)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 03 : end input Lastname thai -->
+
+  <br>
+  <!-- 04 : start input Fristname english -->
+  <ion-item>
+    <ion-label position="floating">ชื่อ (ภาษาอังกฤษ)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 04 : end input Fristname english -->
+
+  <br>
+  <!-- 05 : start input Lastname english -->
+  <ion-item>
+    <ion-label position="floating">นามสกุล (ภาษาอังกฤษ)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 05 : end input Lastname english -->
+
+  <br>
+  <!-- 06 : start input ID card -->
+  <ion-item>
+    <ion-label position="floating">เลขบัตรประชาชน</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 06 : end input ID card -->
+
+  <br>
+  <!-- 07 : start Date -->
+  <ion-item>
+    <ion-label>วัน/เดือน/ปีเกิด</ion-label>
+    <div class="input-group date" data-provide="datepicker">
+      <input type="date" class="form-control">
+      <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+      </div>
+    </div>
+  </ion-item>
+  <!-- 07 : end Date -->
+
+  <br>
+  <!-- 08 : start dropdow nationality -->
+  <ion-item>
+    <ion-label>สัญชาติ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="ไทย_nat">ไทย</ion-select-option>
+      <ion-select-option value="ลาว_nat">ลาว</ion-select-option>
+      <ion-select-option value="เวียดนาม_nat">เวียดนาม</ion-select-option>
+      <ion-select-option value="กัมพูชา_nat">กัมพูชา</ion-select-option>
+      <ion-select-option value="มาเลเชีย_nat">มาเลเชีย</ion-select-option>
+      <ion-select-option value="สิงค์โปร์_nat">สิงค์โปร์</ion-select-option>
+      <ion-select-option value="จีน_nat">จีน</ion-select-option>
+      <ion-select-option value="อินเดีย_nat">อินเดีย</ion-select-option>
+      <ion-select-option value="เนปาล_nat">เนปาล</ion-select-option>
+      <ion-select-option value="ญี่ปุ่น_nat">ญี่ปุ่น</ion-select-option>
+      <ion-select-option value="อาร์เจนตินา_nat">อาร์เจนตินา</ion-select-option>
+      <ion-select-option value="สหรัฐอเมริกา_nat">สหรัฐอเมริกา</ion-select-option>
+      <ion-select-option value="ออสเตรเลีย_nat">ออสเตรเลีย</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 08 : end dropdow nationality -->
+
+  <br>
+  <!-- 09 : start dropdow race -->
+  <ion-item>
+    <ion-label>เชื้อชาติ</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="ไทย_race">ไทย</ion-select-option>
+      <ion-select-option value="ลาว_race">ลาว</ion-select-option>
+      <ion-select-option value="เวียดนาม_race">เวียดนาม</ion-select-option>
+      <ion-select-option value="กัมพูชา_race">กัมพูชา</ion-select-option>
+      <ion-select-option value="มาเลเชีย_race">มาเลเชีย</ion-select-option>
+      <ion-select-option value="สิงค์โปร์_race">สิงค์โปร์</ion-select-option>
+      <ion-select-option value="จีน_race">จีน</ion-select-option>
+      <ion-select-option value="อินเดีย_race">อินเดีย</ion-select-option>
+      <ion-select-option value="เนปาล_race">เนปาล</ion-select-option>
+      <ion-select-option value="ญี่ปุ่น_race">ญี่ปุ่น</ion-select-option>
+      <ion-select-option value="อาร์เจนตินา_race">อาร์เจนตินา</ion-select-option>
+      <ion-select-option value="สหรัฐอเมริกา_race">สหรัฐอเมริกา</ion-select-option>
+      <ion-select-option value="ออสเตรเลีย_race">ออสเตรเลีย</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 09 : end dropdow race -->
+
+  <br>
+  <!-- 10 : start dropdow Religion -->
+  <ion-item>
+    <ion-label>ศาสนา</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
+      <ion-select-option value="พุทธ">พุทธ</ion-select-option>
+      <ion-select-option value="คริสต์">คริสต์</ion-select-option>
+      <ion-select-option value="อิสลาม">อิสลาม</ion-select-option>
+      <ion-select-option value="ซิกข์">ซิกข์</ion-select-option>
+      <ion-select-option value="ฮินดู">ฮินดู</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- 10 : end dropdow Religion -->
+
+  <br>
+  <!-- 11 : start input Phone number -->
+  <ion-item>
+    <ion-label position="floating">เบอร์โทรศัพท์</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 11 : end input Phone number -->
+
+  <br>
+  <!-- 12 : start input careerr -->
+  <ion-item>
+    <ion-label position="floating">อาชีพ</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- 12 : end input careerr -->
+
+  <br>
+  <!-- 13 : start input earnings -->
+  <ion-item>
+    <ion-label position="floating">รายได้ (ต่อเดือน)</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- 13 : end input earnings -->
+  <!-- -------------------สิ้นสุด ส่วนที่ 2: ข้อมูลของมารดา----------------------------- -->
+
+  <br>
+  <!--  strat button save-->
+  <ion-item> 
+    <ion-grid>
+   <ion-row>
+      <!-- strat button back -->
+          <ion-col class="startp" align-items-start>
+          <ion-button type="submit" name="button" id="button_backend" size="Default" color="medium" routerLink="/reg">ย้อนกลับ</ion-button>
+          </ion-col>
+      <!-- strat button back -->
+
+        <!-- strat button next -->
+          <ion-col col-12> </ion-col>
+          <ion-col col-12> </ion-col>
+          <ion-col class="startp" align-self-end>
+          <ion-button type="submit" name="button" id="button_nextform" size="Default" color="primary" routerLink="/start">ถัดไป</ion-button>
+        </ion-col>
+        <!-- strat button next -->
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <!--  end button save-->
+
+</ion-content>

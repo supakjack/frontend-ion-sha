@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>หน้า login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <p>ชื่อผู้ใช้งาน :</p>
+      </ion-col>
+      <ion-col size="8">
+        <ion-item color="light">
+          <ion-input
+            type="string"
+            placeholder="ใส่ชื่อผู้ใช้งาน"
+            [(ngModel)]="username"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <p>รหัสผ่าน :</p>
+      </ion-col>
+      <ion-col size="8">
+        <ion-item color="light">
+          <ion-input
+            type="password"
+            placeholder="ใส่รหัสผ่าน"
+            [(ngModel)]="password"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button
+          (click)="this.login()"
+          expand="block"
+          >เข้าสู่ระบบ</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div *ngIf="this.wrongstatus">ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง</div>
+</ion-content>
+
+<!-- <button *ngIf="condition" [routerLink]="['SomeRoute']></button>
+<button *ngIf="!condition"></button>
+
+<button [routerLink]="myVar ? ['/myScreen'] : []"></button> -->

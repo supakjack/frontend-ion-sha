@@ -1,0 +1,136 @@
+<!-- strat ionic content -->
+<ion-content>
+  <br/>
+  <!-- strat ionic card -->
+  <ion-card>
+    <!-- strat header card -->
+    <ion-card-header>
+      <!-- start subtitle register -->
+      <ion-card color="primary">
+        <ion-grid>
+          <ion-row justify-content-center align-items-end style="height:100%">        
+              <ion-label><b style="font-size: 18px;">สมัครเรียน</b></ion-label>    
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <!-- end subtitle register -->
+    </ion-card-header>
+    
+
+    <ion-card-content>
+      <!-- strat icon doccument -->
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col>
+          <img style="width: 100px;" src="./../assets/icon/clipboard.png" />
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+      <!-- end icon doccument -->
+
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col class="startp">
+          <!-- strat button add -->
+          <ion-button id="button_add" (click)="addStudent()" routerLink="/end">
+            <ion-icon name="add-circle"> </ion-icon>
+            <ion-col col-12> </ion-col>
+            เพิ่มใบสมัครเรียน {{this.sessionService.username}}
+          </ion-button>
+          <!-- end button add -->
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+    </ion-card-content>
+    <!-- end header card -->
+    <br/>
+  </ion-card>
+  <!-- end ionic card -->
+   
+  <ion-card>
+    
+    <ion-card-header>
+      <!-- start subtitle register -->
+      <ion-card color="primary">
+        <ion-grid>
+          <ion-row justify-content-center align-items-end style="height:100%">        
+              <ion-label><b style="font-size: 18px;">ประวัติการสมัครเรียน</b></ion-label>    
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <!-- end subtitle register -->
+    </ion-card-header>
+
+    <!-- example student 01 -->
+    <ion-card>
+      <ion-card-header>
+        <!-- start subtitle register -->
+        <ion-card-title color="dark" style="font-size: 16px;">เลขที่สมัคร : 6310002</ion-card-title>
+        <ion-text>
+          <p>ชื่อ   : เด็กชายสมชัย ทองดี</p>
+          <p>ระดับชั้น  : อนุบาล</p>
+          <p>อาศัย : ในเขตพื้นที่</p>
+          <p>สถานะ : <a style="color: chartreuse;">ผ่านการคัดเลือก</a></p>
+        </ion-text>
+        <!-- end subtitle register -->
+      </ion-card-header>
+    </ion-card>
+    <!-- example student 01 -->
+
+     <!-- example student 02 -->
+     <ion-card>
+      <ion-card-header>
+        <!-- start subtitle register -->
+        <ion-card-title color="dark" style="font-size: 16px;">เลขที่สมัคร : 6310001</ion-card-title>
+        <ion-text>
+          <p>ชื่อ   : เด็กชายสมใจ ทองดี</p>
+          <p>ระดับชั้น  : อนุบาล</p>
+          <p>อาศัย : นอกเขตพื้นที่</p>
+          <p>สถานะ : <a style="color:crimson;">ไม่ผ่านการคัดเลือก</a></p>
+        </ion-text>
+       
+        <!-- end subtitle register -->
+      </ion-card-header>
+    </ion-card>
+    <!-- example student 02 -->
+
+    <!-- example student 03 -->
+    <ion-card>
+      <ion-card-header>
+        <!-- start subtitle register -->
+        <ion-card-title color="dark" style="font-size: 16px;">เลขที่สมัคร : 6310000</ion-card-title>
+        <ion-text>
+          <p>ชื่อ   : เด็กหญิงกุมภา ทองดี</p>
+          <p>ระดับชั้น  : เตรียมอนุบาล</p>
+          <p>อาศัย : นอกเขตพื้นที่</p>
+          <p>สถานะ : <a style="color:darkgoldenrod;">รอผลดำเนินการ</a></p>
+        </ion-text>
+        <br />
+        <div align="right">
+          <!-- strat ionic col -->
+          <ion-col class="startp">
+
+            <!-- strat button modify -->
+            <ion-button color="warning" id="button_modify"  routerLink="#">
+              <ion-icon name="md-create"> </ion-icon>
+            </ion-button>
+            <!-- end button modify -->
+
+             <!-- strat button cancel -->
+             <ion-button color="danger" id="button_cancel" routerLink="#">
+              <ion-icon name="md-close-circle"> </ion-icon>
+            </ion-button>
+            <!-- end button cancel -->
+
+          </ion-col>
+          <!-- end ionic col -->
+        </div>
+        <!-- end subtitle register -->
+      </ion-card-header>
+    </ion-card>
+    <!-- example student 03 -->
+  
+  </ion-card>
+</ion-content>
+<!-- end ionic content -->
+
