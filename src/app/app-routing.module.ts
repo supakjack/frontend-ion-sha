@@ -51,6 +51,14 @@ const routes: Routes = [
     path: 'news',
     loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'student',
+    loadChildren: () => import('./pages/student/student.module').then( m => m.StudentPageModule)
+  },
 ];
 
 @NgModule({

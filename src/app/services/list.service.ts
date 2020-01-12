@@ -8,11 +8,25 @@ import { map } from 'rxjs/operators';
 })
 export class ListService {
   url = 'http://localhost:3000/list';
+  urlApp = 'http://localhost:3000/app';
   apiKey = '';
   public lists: any = [];
 
   constructor(private http: HttpClient) {}
   getAppByUser(username: string) {
-     return this.http.get<any[]>(`${this.url}/${username}`)
+    return this.http.get<any[]>(`${this.url}/${username}`);
+  }
+  getListAwiatByEdl(id) {
+    return this.http.get<any[]>(`${this.url}/edl/${id}`);
+  }
+  updatePassApp(id) {
+    return this.http.patch<any[]>(`${this.urlApp}/pass/${id}`, {
+      app_sta_id: '2'
+    });
+  }
+  updateFailApp(id) {
+    return this.http.patch<any[]>(`${this.urlApp}/fail/${id}`, {
+      app_sta_id: '3'
+    });
   }
 }

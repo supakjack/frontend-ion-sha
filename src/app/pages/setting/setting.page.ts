@@ -24,7 +24,7 @@ export class SettingPage implements OnInit {
         this.ngOnInit();
         this.sessionService.reState = false;
       }
-    }, 1000);
+    }, 500);
   }
 
   ngOnInit() {
@@ -60,7 +60,7 @@ export class SettingPage implements OnInit {
   /**
    * clickEdit
    */
-  public clickEdit(id) {
+  public clickEdit(id:any) {
     this.sessionService.regId = id;
     this.router.navigate(['/filter']);
   }

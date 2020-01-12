@@ -16,6 +16,7 @@ export class SessionService {
   public appId: Number;
   public reState: Boolean;
   public regId: any;
+  public crsId: any;
   constructor(private http: HttpClient) {
     this.clearAppId();
     this.reState = true;

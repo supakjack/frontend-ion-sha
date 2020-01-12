@@ -23,7 +23,7 @@ export class ListPage implements OnInit {
         this.ngOnInit();
         this.sessionService.reState = false;
       }
-    }, 1000);
+    }, 500);
   }
 
   ngOnInit() {
