@@ -1,0 +1,85 @@
+<!-- strat ionic content -->
+<ion-content>
+  <br />
+  <ion-button id="button_back" (click)="addStudent()" routerLink="/admin">
+    <ion-icon name="ios-arrow-back"> </ion-icon>
+    <ion-col col-12> </ion-col>
+     Back
+  </ion-button>
+  <!-- strat ionic card -->
+  <ion-card>
+    <!-- strat header card -->
+
+    <ion-card-content>
+      <!-- strat icon doccument -->
+      <div align="center">
+        <ion-col>
+          <img style="width: 100px;" src="./../assets/icon/student.png" />
+        </ion-col>
+        <ion-card-title style="color:black">คัดเลือกนักเรียน</ion-card-title>
+        <ion-card-title style="color:black">_____</ion-card-title>
+      </div>
+      <br />
+      <!-- end icon doccument -->
+    </ion-card-content>
+    <!-- end header card -->
+
+    <!-- card 01 เตรียมอนุบาล -->
+    <div align="center">
+      <!-- strat ionic col -->
+      <ion-col class="startp">
+        <!-- strat button add -->
+        <ion-button id="button_kindergarten"  routerLink="/append">
+          <ion-icon name="add-circle"> </ion-icon>
+          <ion-col col-12> </ion-col>
+          ระดับชั้นเตรียมอนุบาล
+        </ion-button>
+        <!-- end button add -->
+      </ion-col>
+    </div>
+    <br />
+    <!-- card 01 เตรียมอนุบาล -->
+
+    <!-- card 02 อนุบาล -->
+    <div align="center">
+      <!-- strat ionic col -->
+      <ion-col class="startp">
+        <!-- strat button add -->
+        <ion-button id="button_curator" routerLink="/append" >
+          <ion-icon name="add-circle"> </ion-icon>
+          <ion-col col-12> </ion-col>
+          ระดับชั้นอนุบาล
+          <ion-col col-12> </ion-col>
+          <ion-col col-12> </ion-col>
+          <ion-col col-12> </ion-col>
+          <ion-col col-12> </ion-col>
+        </ion-button>
+        <!-- end button add -->
+      </ion-col>
+      <!-- end ionic col -->
+    </div>
+    <br />
+    <!-- card 02 อนุบาล -->
+
+    <!-- card 03 ประถมศึกษา -->
+    <div align="center">
+      <!-- strat ionic col -->
+      <ion-col class="startp">
+        <!-- strat button add -->
+        <ion-button id="button_Primary" routerLink="/append" >
+          <ion-icon name="add-circle"> </ion-icon>
+          <ion-col col-12> </ion-col>
+          ระดับชั้นประถมศึกษา
+          <ion-col col-12> </ion-col>
+        </ion-button>
+        <!-- end button add -->
+      </ion-col>
+      <!-- end ionic col -->
+    </div>
+    <br />
+    <!-- card 03 ประถมศึกษา -->
+    
+  </ion-card>
+  <!-- end ionic card -->
+</ion-content>
+<!-- end ionic content -->

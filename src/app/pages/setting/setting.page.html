@@ -1,273 +1,304 @@
-<ion-header>
-  </ion-header>
-  
-  <ion-content>
-     <!-- เตรียมอนุบาล -->
-    <ion-card>
-    <ion-card color="primary">
-          <ion-grid>
-            <ion-row justify-content-center align-items-end style="height:100%">
-                <ion-label><b style="font-size: medium;">ระดับชั้นเตรียมอนุบาล</b></ion-label>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-      <ion-card-content>
+<ion-header> </ion-header>
+
+<!-- strat ionic card -->
+<ion-content>
+  <br />
+  <ion-button
+    id="button_back"
+    (click)="addStudent()"
+    routerLink="/admin"
+    color="medium"
+  >
+    <ion-icon name="ios-arrow-back"> </ion-icon>
+    <ion-col col-12> </ion-col>
+    ย้อนกลับ
+  </ion-button>
+  <!-- เตรียมอนุบาล -->
+  <ion-card *ngFor="let register of this.registers; let i = index">
+    <br />
+    <ion-card color="success">
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-label
+            ><b style="font-size: medium;"
+              >ระดับชั้น{{register.edu}} {{register.class_title}} รอบที่ {{register.round}}</b
+            ></ion-label
+          >
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-card-content>
+      <ion-grid>
         <ion-item>
-            <ion-label>วันที่เปิดรับสมัครเรียน </ion-label>
-            <ion-label> 12/10/62 </ion-label>
-          </ion-item><br>
+          วันที่เปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          {{register.start}} </ion-item
+        ><br />
+      </ion-grid>
+
+      <ion-grid>
         <ion-item>
-            <ion-label>วันที่ปิดรับสมัครเรียน</ion-label>
-            <ion-label> 12/11/62 </ion-label>
-          </ion-item>
-      </ion-card-content>
+          วันที่ปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          {{register.end}} </ion-item
+        ><br />
+      </ion-grid>
+
+      <ion-grid>
+        <ion-item>
+          หลักสูตรที่เปิดรับ
+          <ion-col col-12> </ion-col>
+          {{register.cours_th}} </ion-item
+        ><br />
+      </ion-grid>
+
+      <ion-grid>
+        <ion-item>
+          จำนวนที่เปิดรับ
+          <ion-col col-12> </ion-col>
+          {{register.max}} คน</ion-item
+        ><br />
+      </ion-grid>
+
+      <ion-grid>
+        <ion-item>
+          จำนวนที่สมัคร
+          <ion-col col-12> </ion-col>
+          {{register.now}} คน</ion-item
+        ><br />
+      </ion-grid>
+    </ion-card-content>
+
+    <br />
+
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-button
+          type="submit"
+          name="button"
+          id="button"
+          size="Default"
+          color="warning"
+          routerLink="/filter"
+          >แก้ไข</ion-button
+        >
+      </ion-row>
+    </ion-grid>
+
+    <br />
+  </ion-card>
+
+  <!-- อนุบาล -->
+  <ion-card>
+    <br />
+    <ion-card color="success">
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-label
+            ><b style="font-size: medium;">ระดับชั้นอนุบาล</b></ion-label
+          >
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-item>
+          วันที่เปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          12/10/62 </ion-item
+        ><br />
+      </ion-grid>
+
+      <ion-grid>
+        <ion-item>
+          วันที่ปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          12/12/62 </ion-item
+        ><br />
+      </ion-grid>
+    </ion-card-content>
     <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
     <ion-item>
-        <ion-label floating>ภาษาไทย</ion-label>
-        <div align="center" >
+      <ion-label floating>ภาษาไทย</ion-label>
+      <div align="center">
         <ion-label floating>50 </ion-label>
-        </div>
-        <ion-grid>
-          <ion-row justify-content-center align-items-end style="height:100%">
-            <ion-col col-12> </ion-col>
-            <ion-col col-12>
-              <ion-label floating>คน</ion-label>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        
-  
-      </ion-item>
-      <ion-item>
-          <ion-label floating>ภาษาอังกฤษ</ion-label>
-          <div align="center" >
-            <ion-label floating>30 </ion-label>
-            </div>
-            <ion-grid>
-              <ion-row justify-content-center align-items-end style="height:100%">
-                <ion-col col-12> </ion-col>
-                <ion-col col-12>
-                  <ion-label floating>คน</ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-        </ion-item>
-  
-        <ion-item>
-        <ion-label floating>สองภาษา (ไทย+อังกฤษ)</ion-label>
-        <div align="center" >
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>ภาษาอังกฤษ</ion-label>
+      <div align="center">
+        <ion-label floating>20 </ion-label>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>สองภาษา</ion-label>
+      <div align="center">
         <ion-label floating> 20 </ion-label>
-        </div>
-        <ion-grid>
-          <ion-row justify-content-center align-items-end style="height:100%">
-            <ion-col col-12> </ion-col>
-            <ion-col col-12>
-              <ion-label floating>คน</ion-label>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-  
-      <ion-item>
-          <ion-label floating>จำนวนที่เปิดรับสมัคร</ion-label>
-          <div align="center" >
-            <ion-label floating>100 </ion-label>
-            </div>
-            <ion-grid>
-              <ion-row justify-content-center align-items-end style="height:100%">
-                <ion-col col-12> </ion-col>
-                <ion-col col-12>
-                  <ion-label floating>คน</ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-        </ion-item>
-  
-        <ion-item>
-            <ion-grid>
-              <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-button type="submit" name="button" id="button" size="Default" color="warning" routerLink="/filter">แก้ไข</ion-button>
-                </ion-row>
-            </ion-grid>
-          </ion-item>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>จำนวนที่เปิดรับ</ion-label>
+      <div align="center">
+        <ion-label floating>90 </ion-label>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <br />
+
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-button
+          type="submit"
+          name="button"
+          id="button"
+          size="Default"
+          color="warning"
+          routerLink="/filter"
+          >แก้ไข</ion-button
+        >
+      </ion-row>
+    </ion-grid>
+    <br />
+  </ion-card>
+
+  <!-- ประถมศึกษา -->
+  <ion-card>
+    <br />
+    <ion-card color="success">
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-label
+            ><b style="font-size: medium;">ระดับชั้นประถมศึกษา</b></ion-label
+          >
+        </ion-row>
+      </ion-grid>
     </ion-card>
-  <!-- อนุบาล --> 
-    <ion-card>
-      <ion-card color="primary">
-            <ion-grid>
-              <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-label><b style="font-size: medium;">ระดับชั้นอนุบาล</b></ion-label>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
-        <ion-card-content>
-          <ion-item>
-              <ion-label>วันที่เปิดรับสมัครเรียน </ion-label>
-              <ion-label> 12/10/62 </ion-label>
-            </ion-item><br>
-          <ion-item>
-              <ion-label>วันที่ปิดรับสมัครเรียน</ion-label>
-              <ion-label> 12/11/62 </ion-label>
-            </ion-item>
-        </ion-card-content>
-      <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
-      <ion-item>
-          <ion-label floating>ภาษาไทย</ion-label>
-          <div align="center" >
-          <ion-label floating>50 </ion-label>
-          </div>
-          <ion-grid>
-            <ion-row justify-content-center align-items-end style="height:100%">
-              <ion-col col-12> </ion-col>
-              <ion-col col-12>
-                <ion-label floating>คน</ion-label>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          
-    
-        </ion-item>
+    <ion-card-content>
+      <ion-grid>
         <ion-item>
-            <ion-label floating>ภาษาอังกฤษ</ion-label>
-            <div align="center" >
-              <ion-label floating>20 </ion-label>
-              </div>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-col col-12> </ion-col>
-                  <ion-col col-12>
-                    <ion-label floating>คน</ion-label>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-          </ion-item>
-    
-          <ion-item>
-          <ion-label floating>สองภาษา (ไทย+อังกฤษ)</ion-label>
-          <div align="center" >
-          <ion-label floating> 20 </ion-label>
-          </div>
-          <ion-grid>
-            <ion-row justify-content-center align-items-end style="height:100%">
-              <ion-col col-12> </ion-col>
-              <ion-col col-12>
-                <ion-label floating>คน</ion-label>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-item>
-    
+          วันที่เปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          12/10/62 </ion-item
+        ><br />
+      </ion-grid>
+
+      <ion-grid>
         <ion-item>
-            <ion-label floating>จำนวนที่เปิดรับสมัคร</ion-label>
-            <div align="center" >
-              <ion-label floating>90 </ion-label>
-              </div>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-col col-12> </ion-col>
-                  <ion-col col-12>
-                    <ion-label floating>คน</ion-label>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-          </ion-item>
-    
-          <ion-item>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                    <ion-button type="submit" name="button" id="button" size="Default" color="warning" routerLink="/filter">แก้ไข</ion-button>
-                  </ion-row>
-              </ion-grid>
-            </ion-item>
-      </ion-card>
-  
-      <!-- ประถมศึกษา --> 
-    <ion-card>
-      <ion-card color="primary">
-            <ion-grid>
-              <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-label><b style="font-size: medium;">ระดับชั้นประถมศึกษา</b></ion-label>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
-        <ion-card-content>
-          <ion-item>
-              <ion-label>วันที่เปิดรับสมัครเรียน </ion-label>
-              <ion-label> 12/10/62 </ion-label>
-            </ion-item><br>
-          <ion-item>
-              <ion-label>วันที่ปิดรับสมัครเรียน</ion-label>
-              <ion-label> 12/11/62 </ion-label>
-            </ion-item>
-        </ion-card-content>
-      <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
-      <ion-item>
-          <ion-label floating>ภาษาไทย</ion-label>
-          <div align="center" >
-          <ion-label floating>20 </ion-label>
-          </div>
-          <ion-grid>
-            <ion-row justify-content-center align-items-end style="height:100%">
-              <ion-col col-12> </ion-col>
-              <ion-col col-12>
-                <ion-label floating>คน</ion-label>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          
-    
-        </ion-item>
-        <ion-item>
-            <ion-label floating>ภาษาอังกฤษ</ion-label>
-            <div align="center" >
-              <ion-label floating>30 </ion-label>
-              </div>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-col col-12> </ion-col>
-                  <ion-col col-12>
-                    <ion-label floating>คน</ion-label>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-          </ion-item>
-    
-          <ion-item>
-          <ion-label floating>สองภาษา (ไทย+อังกฤษ)</ion-label>
-          <div align="center" >
-          <ion-label floating> 20 </ion-label>
-          </div>
-          <ion-grid>
-            <ion-row justify-content-center align-items-end style="height:100%">
-              <ion-col col-12> </ion-col>
-              <ion-col col-12>
-                <ion-label floating>คน</ion-label>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-item>
-    
-        <ion-item>
-            <ion-label floating>จำนวนที่เปิดรับสมัคร</ion-label>
-            <div align="center" >
-              <ion-label floating>70 </ion-label>
-              </div>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-col col-12> </ion-col>
-                  <ion-col col-12>
-                    <ion-label floating>คน</ion-label>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-          </ion-item>
-    
-          <ion-item>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                    <ion-button type="submit" name="button" id="button" size="Default" color="warning" routerLink="/filter">แก้ไข</ion-button>
-                  </ion-row>
-              </ion-grid>
-            </ion-item>
-      </ion-card>
-  </ion-content>
+          วันที่ปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          12/12/62 </ion-item
+        ><br />
+      </ion-grid>
+    </ion-card-content>
+    <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
+    <ion-item>
+      <ion-label floating>ภาษาไทย</ion-label>
+      <div align="center">
+        <ion-label floating>20 </ion-label>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>ภาษาอังกฤษ</ion-label>
+      <div align="center">
+        <ion-label floating>30 </ion-label>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>สองภาษา</ion-label>
+      <div align="center">
+        <ion-label floating> 20 </ion-label>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>จำนวนที่เปิดรับ</ion-label>
+      <div align="center">
+        <ion-label floating>70 </ion-label>
+      </div>
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-col col-12> </ion-col>
+          <ion-col col-12>
+            <ion-label floating>คน</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <br />
+
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-button
+          type="submit"
+          name="button"
+          id="button"
+          size="Default"
+          color="warning"
+          routerLink="/filter"
+          >แก้ไข</ion-button
+        >
+      </ion-row>
+    </ion-grid>
+    <br />
+  </ion-card>
+</ion-content>

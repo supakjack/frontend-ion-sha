@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './../../services/login.service';
 import { SessionService } from './../../services/session.service';
-import {Router} from "@angular/router"
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import * as $ from 'jquery';
 
@@ -45,10 +45,18 @@ export class LoginPage implements OnInit {
         this.sessionService.setSession(
           this.username,
           this.password,
-          this.user_iden.status
+          this.user_iden.status,
+          this.user_iden.id
         );
         console.log(this.sessionService.getSession());
-        this.router.navigate(['/list'])
+        console.log(this.sessionService.getSession());
+        console.log(this.sessionService.getSession());
+        console.log(this.sessionService.getSession());
+        if(this.sessionService.status=="1"){
+          this.router.navigate(['/list']);
+        }else if(this.sessionService.status=="2"){
+          this.router.navigate(['/admin']);
+        }
       }
     });
   }

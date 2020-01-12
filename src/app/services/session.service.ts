@@ -10,15 +10,34 @@ export class SessionService {
   url = 'http://localhost:3000/ses';
   apiKey = '';
   public username = '';
+  public userId: Number;
   public password = '';
   public status = '';
-  constructor(private http: HttpClient) {}
-  getSession() {
-    return { username: this.username, password: this.password, status: this.status };
+  public appId: Number;
+  public reState: Boolean;
+  public regId: any;
+  constructor(private http: HttpClient) {
+    this.clearAppId();
+    this.reState = true;
   }
-  setSession(usr = null, pas = null, sta =null) {
+  public clearAppId() {
+    this.appId = null;
+  }
+  public setAppId(id) {
+    this.appId = id;
+  }
+  getSession() {
+    return {
+      id: this.userId,
+      username: this.username,
+      password: this.password,
+      status: this.status
+    };
+  }
+  setSession(usr = null, pas = null, sta = null, id = null) {
     this.username = usr;
     this.password = pas;
     this.status = sta;
+    this.userId = id;
   }
 }

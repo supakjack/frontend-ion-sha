@@ -7,271 +7,219 @@
 </ion-header>
 
 <ion-content>
-  <br>
+  <br />
   <!-- 01 : start dropdow degree -->
   <ion-item>
     <ion-label>สมัครเรียนระดับชั้น</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="01">เตรียมอนุบาล </ion-select-option>
-      <ion-select-option value="02">อนุบาลปีที่ 1 </ion-select-option>
-      <ion-select-option value="03">อนุบาลปีที่ 2 </ion-select-option>
-      <ion-select-option value="04">อนุบาลปีที่ 3</ion-select-option>
-      <ion-select-option value="05">ประศึกษาปีที่ 1</ion-select-option>
-      <ion-select-option value="06">ประศึกษาปีที่ 2 </ion-select-option>
-      <ion-select-option value="07">ประศึกษาปีที่ 3 </ion-select-option>
-      <ion-select-option value="08">ประศึกษาปีที่ 4 </ion-select-option>
-      <ion-select-option value="09">ประศึกษาปีที่ 5</ion-select-option>
-      <ion-select-option value="10">ประศึกษาปีที่ 6 </ion-select-option>
+    <ion-select
+      [(ngModel)]="this.regId"
+      #select
+      interface="popover"
+      placeholder="กรุณาเลือก"
+      (ionChange)="logRegId()"
+    >
+      <ion-select-option
+        *ngFor="let newsOpen of this.newsOpens; let i = index"
+        value="{{newsOpen.id}}"
+        [selected]="newsOpen.id == this.regId"
+        >{{newsOpen.edu}} {{newsOpen.class_title}} รอบที่
+        {{newsOpen.round}}</ion-select-option
+      >
     </ion-select>
   </ion-item>
   <!-- 01 : end dropdow degree -->
 
-  <br>
+  <br />
   <!-- 02 : start dropdow Name Title -->
   <ion-item>
     <ion-label>คำนำหน้าชื่อ</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="นาย">นาย</ion-select-option>
-      <ion-select-option value="นางสาว">นางสาว</ion-select-option>
-      <ion-select-option value="นาง">นาง</ion-select-option>
-      <ion-select-option value="เด็กหญิง">เด็กหญิง</ion-select-option>
-      <ion-select-option value="เด็กชาย">เด็กชาย</ion-select-option>
+    <ion-select
+      [(ngModel)]="this.pfId"
+      interface="popover"
+      placeholder="กรุณาเลือก"
+    >
+      <ion-select-option
+        *ngFor="let prefixName of this.prefixNames; let i = index"
+        value="{{prefixName.pf_id}}"
+        [selected]="prefixName.pf_id == this.pfId"
+        >{{prefixName.pf_name}}</ion-select-option
+      >
     </ion-select>
   </ion-item>
   <!-- 02 : end dropdow Name Title -->
 
-  <br>
+  <br />
   <!-- 03 : start input ID card -->
   <ion-item>
     <ion-label position="floating">เลขบัตรประชาชน</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="this.cardId"></ion-input>
   </ion-item>
   <!-- 03 : end input ID card -->
 
-  <br>
+  <br />
   <!-- 04 : start input Fristname thai -->
   <ion-item>
     <ion-label position="floating">ชื่อ (ภาษาไทย)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="this.fNameTh"></ion-input>
   </ion-item>
   <!-- 04 : end input Fristname thai -->
 
-  <br>
+  <br />
   <!-- 05 : start input Lastname thai -->
   <ion-item>
     <ion-label position="floating">นามสกุล (ภาษาไทย)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="this.lNameTh"></ion-input>
   </ion-item>
   <!-- 05 : end input Lastname thai -->
 
-  <br>
+  <br />
   <!-- 06 : start input Fristname english -->
   <ion-item>
     <ion-label position="floating">ชื่อ (ภาษาอังกฤษ)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="this.fNameEn"></ion-input>
   </ion-item>
   <!-- 06 : end input Fristname english -->
 
-  <br>
+  <br />
   <!-- 07 : start input Lastname english -->
   <ion-item>
     <ion-label position="floating">นามสกุล (ภาษาอังกฤษ)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="this.lNameEn"></ion-input>
   </ion-item>
   <!-- 07 : end input Lastname english -->
 
-  <br>
+  <br />
   <!-- 08 : start dropdow province of birth -->
   <ion-item>
     <ion-label>จังหวัดที่เกิด</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="กรุงเทพมหานคร">กรุงเทพมหานคร</ion-select-option>
-      <ion-select-option value="สมุทรปราการ">สมุทรปราการ</ion-select-option>
-      <ion-select-option value="นนทบุรี">นนทบุรี</ion-select-option>
-      <ion-select-option value="กำแพงเพชร">กำแพงเพชร</ion-select-option>
-      <ion-select-option value="ชัยนาท">ชัยนาท</ion-select-option>
-      <ion-select-option value="นครนายก">นครนายก</ion-select-option>
-      <ion-select-option value="นครปฐม">นครปฐม</ion-select-option>
-      <ion-select-option value="นครสวรรค์">นครสวรรค์</ion-select-option>
-      <ion-select-option value="ปทุมธานี">ปทุมธานี</ion-select-option>
-      <ion-select-option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</ion-select-option>
-      <ion-select-option value="พิจิตร">พิจิตร</ion-select-option>
-      <ion-select-option value="พิษณุโลก">พิษณุโลก</ion-select-option>
-      <ion-select-option value="เพชรบูรณ์">เพชรบูรณ์</ion-select-option>
-      <ion-select-option value="ลพบุรี">ลพบุรี</ion-select-option>
-      <ion-select-option value="สมุทรสาคร">สมุทรสาคร</ion-select-option>
-      <ion-select-option value="สมุทรสงคราม">สมุทรสงคราม</ion-select-option>
-      <ion-select-option value="สิงห์บุรี">สิงห์บุรี</ion-select-option>
-      <ion-select-option value="สุโขทัย">สุโขทัย</ion-select-option>
-      <ion-select-option value="สุพรรณบุรี">สุพรรณบุรี</ion-select-option>
-      <ion-select-option value="สระบุรี">สระบุรี</ion-select-option>
-      <ion-select-option value="อ่างทอง">อ่างทอง</ion-select-option>
-      <ion-select-option value="อุทัยธานี">อุทัยธานี</ion-select-option>
-      <ion-select-option value="เชียงราย">เชียงราย</ion-select-option>
-      <ion-select-option value="เชียงใหม่">เชียงใหม่</ion-select-option>
-      <ion-select-option value="น่าน">น่าน</ion-select-option>
-      <ion-select-option value="พะเยา">พะเยา</ion-select-option>
-      <ion-select-option value="แพร่">แพร่</ion-select-option>
-      <ion-select-option value="แม่ฮ่องสอน">แม่ฮ่องสอน</ion-select-option>
-      <ion-select-option value="ลำปาง">ลำปาง</ion-select-option>
-      <ion-select-option value="ลำพูน">ลำพูน</ion-select-option>
-      <ion-select-option value="อุตรดิตถ์">อุตรดิตถ์</ion-select-option>
-      <ion-select-option value="กาฬสินธุ์">กาฬสินธุ์</ion-select-option>
-      <ion-select-option value="ขอนแก่น">ขอนแก่น</ion-select-option>
-      <ion-select-option value="ชัยภูมิ">ชัยภูมิ</ion-select-option>
-      <ion-select-option value="นครพนม">นครพนม</ion-select-option>
-      <ion-select-option value="นครราชสีมา">นครราชสีมา</ion-select-option>
-      <ion-select-option value="บึงกาฬ">บึงกาฬ</ion-select-option>
-      <ion-select-option value="บุรีรัมย์">บุรีรัมย์</ion-select-option>
-      <ion-select-option value="มหาสารคาม">มหาสารคาม</ion-select-option>
-      <ion-select-option value="มุกดาหาร">มุกดาหาร</ion-select-option>
-      <ion-select-option value="ยโสธร">ยโสธร</ion-select-option>
-      <ion-select-option value="ร้อยเอ็ด">ร้อยเอ็ด</ion-select-option>
-      <ion-select-option value="เลย">เลย</ion-select-option>
-      <ion-select-option value="สกลนคร">สกลนคร</ion-select-option>
-      <ion-select-option value="สุรินทร์">สุรินทร์</ion-select-option>
-      <ion-select-option value="ศรีสะเกษ">ศรีสะเกษ</ion-select-option>
-      <ion-select-option value="หนองคาย">หนองคาย</ion-select-option>
-      <ion-select-option value="หนองบัวลำภู">หนองบัวลำภู</ion-select-option>
-      <ion-select-option value="อุดรธานี">อุดรธานี</ion-select-option>
-      <ion-select-option value="อุบลราชธานี">อุบลราชธานี</ion-select-option>
-      <ion-select-option value="อำนาจเจริญ">อำนาจเจริญ</ion-select-option>
-      <ion-select-option value="จันทบุรี">จันทบุรี</ion-select-option>
-      <ion-select-option value="ฉะเชิงเทรา">ฉะเชิงเทรา</ion-select-option>
-      <ion-select-option value="ชลบุรี">ชลบุรี</ion-select-option>
-      <ion-select-option value="ตราด">ตราด</ion-select-option>
-      <ion-select-option value="ปราจีนบุรี">ปราจีนบุรี</ion-select-option>
-      <ion-select-option value="ระยอง">ระยอง</ion-select-option>
-      <ion-select-option value="สระแก้ว">สระแก้ว</ion-select-option>
-      <ion-select-option value="กาญจนบุรี">กาญจนบุรี</ion-select-option>
-      <ion-select-option value="ตาก">ตาก</ion-select-option>
-      <ion-select-option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</ion-select-option>
-      <ion-select-option value="เพชรบุรี">เพชรบุรี</ion-select-option>
-      <ion-select-option value="ราชบุรี">ราชบุรี</ion-select-option>
-      <ion-select-option value="กระบี่">กระบี่</ion-select-option>
-      <ion-select-option value="ชุมพร">ชุมพร</ion-select-option>
-      <ion-select-option value="ตรัง">ตรัง</ion-select-option>
-      <ion-select-option value="นครศรีธรรมราช">นครศรีธรรมราช</ion-select-option>
-      <ion-select-option value="นราธิวาส">นราธิวาส</ion-select-option>
-      <ion-select-option value="ปัตตานี">ปัตตานี</ion-select-option>
-      <ion-select-option value="พังงา">พังงา</ion-select-option>
-      <ion-select-option value="พัทลุง">พัทลุง</ion-select-option>
-      <ion-select-option value="ภูเก็ต">ภูเก็ต</ion-select-option>
-      <ion-select-option value="ระนอง">ระนอง</ion-select-option>
-      <ion-select-option value="สตูล">สตูล</ion-select-option>
-      <ion-select-option value="สงขลา">สงขลา</ion-select-option>
-      <ion-select-option value="สุราษฎร์ธานี">สุราษฎร์ธานี</ion-select-option>
-      <ion-select-option value="ยะลา">ยะลา</ion-select-option>
+    <ion-select
+      [(ngModel)]="this.pvId"
+      interface="popover"
+      placeholder="กรุณาเลือก"
+    >
+      <ion-select-option
+        *ngFor="let province of this.provinces; let i = index"
+        value="{{province.pv_id}}"
+        [selected]="this.pvId == province.pv_id"
+        >{{province.pv_name}}</ion-select-option
+      >
     </ion-select>
   </ion-item>
   <!-- 08 : end dropdow province of birth -->
 
-  <br>
+  <br />
   <!-- 09 : start dropdow nationality -->
   <ion-item>
     <ion-label>สัญชาติ</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="ไทย_nat">ไทย</ion-select-option>
-      <ion-select-option value="ลาว_nat">ลาว</ion-select-option>
-      <ion-select-option value="เวียดนาม_nat">เวียดนาม</ion-select-option>
-      <ion-select-option value="กัมพูชา_nat">กัมพูชา</ion-select-option>
-      <ion-select-option value="มาเลเชีย_nat">มาเลเชีย</ion-select-option>
-      <ion-select-option value="สิงค์โปร์_nat">สิงค์โปร์</ion-select-option>
-      <ion-select-option value="จีน_nat">จีน</ion-select-option>
-      <ion-select-option value="อินเดีย_nat">อินเดีย</ion-select-option>
-      <ion-select-option value="เนปาล_nat">เนปาล</ion-select-option>
-      <ion-select-option value="ญี่ปุ่น_nat">ญี่ปุ่น</ion-select-option>
-      <ion-select-option value="อาร์เจนตินา_nat">อาร์เจนตินา</ion-select-option>
-      <ion-select-option value="สหรัฐอเมริกา_nat">สหรัฐอเมริกา</ion-select-option>
-      <ion-select-option value="ออสเตรเลีย_nat">ออสเตรเลีย</ion-select-option>
+    <ion-select
+      [(ngModel)]="this.naId"
+      interface="popover"
+      placeholder="กรุณาเลือก"
+    >
+      <ion-select-option
+        *ngFor="let nation of this.nations; let i = index"
+        value="{{nation.nation_id}}"
+        [selected]="this.naId == nation.nation_id"
+        >{{nation.nation_name}}</ion-select-option
+      >
     </ion-select>
   </ion-item>
   <!-- 09 : end dropdow nationality -->
 
-  <br>
+  <br />
   <!-- 10 : start dropdow race -->
   <ion-item>
-    <ion-label>เชื้อชาติ</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="ไทย_race">ไทย</ion-select-option>
-      <ion-select-option value="ลาว_race">ลาว</ion-select-option>
-      <ion-select-option value="เวียดนาม_race">เวียดนาม</ion-select-option>
-      <ion-select-option value="กัมพูชา_race">กัมพูชา</ion-select-option>
-      <ion-select-option value="มาเลเชีย_race">มาเลเชีย</ion-select-option>
-      <ion-select-option value="สิงค์โปร์_race">สิงค์โปร์</ion-select-option>
-      <ion-select-option value="จีน_race">จีน</ion-select-option>
-      <ion-select-option value="อินเดีย_race">อินเดีย</ion-select-option>
-      <ion-select-option value="เนปาล_race">เนปาล</ion-select-option>
-      <ion-select-option value="ญี่ปุ่น_race">ญี่ปุ่น</ion-select-option>
-      <ion-select-option value="อาร์เจนตินา_race">อาร์เจนตินา</ion-select-option>
-      <ion-select-option value="สหรัฐอเมริกา_race">สหรัฐอเมริกา</ion-select-option>
-      <ion-select-option value="ออสเตรเลีย_race">ออสเตรเลีย</ion-select-option>
-    </ion-select>
+    <ion-label position="floating">เชื้อชาติ</ion-label>
+    <ion-input type="text" [(ngModel)]="this.ra"></ion-input>
   </ion-item>
   <!-- 10 : end dropdow race -->
 
-  <br>
+  <br />
   <!-- 11 : start dropdow Blood type -->
   <ion-item>
     <ion-label>กรุ๊ปเลือด</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="A">A</ion-select-option>
-      <ion-select-option value="B">B</ion-select-option>
-      <ion-select-option value="O">O</ion-select-option>
-      <ion-select-option value="AB">AB</ion-select-option>
-      <ion-select-option value="Rh">Rh</ion-select-option>
+    <ion-select
+      [(ngModel)]="this.bl"
+      interface="popover"
+      placeholder="กรุณาเลือก"
+    >
+      <ion-select-option
+        *ngFor="let blood of this.bloods; let i = index"
+        value="{{blood.blood_id}}"
+        [selected]="this.bl==blood.blood_id"
+        >{{blood.blood_name}}</ion-select-option
+      >
     </ion-select>
   </ion-item>
   <!-- 11 : end dropdow Blood type -->
 
-  <br>
+  <br />
   <!-- 12 : start dropdow Religion -->
   <ion-item>
     <ion-label>ศาสนา</ion-label>
-    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="กรุณาเลือก">
-      <ion-select-option value="พุทธ">พุทธ</ion-select-option>
-      <ion-select-option value="คริสต์">คริสต์</ion-select-option>
-      <ion-select-option value="อิสลาม">อิสลาม</ion-select-option>
-      <ion-select-option value="ซิกข์">ซิกข์</ion-select-option>
-      <ion-select-option value="ฮินดู">ฮินดู</ion-select-option>
+    <ion-select
+      [(ngModel)]="this.re"
+      interface="popover"
+      placeholder="กรุณาเลือก"
+    >
+      <ion-select-option
+        *ngFor="let reli of this.relis; let i = index"
+        value="{{reli.reli_id}}"
+        [selected]="this.re==reli.reli_id"
+        >{{reli.reli_name}}</ion-select-option
+      >
     </ion-select>
   </ion-item>
   <!-- 12 : end dropdow Religion -->
 
-  <br>
+  <br />
   <!-- 13 : start Date -->
   <ion-item>
     <ion-label>วัน/เดือน/ปีเกิด</ion-label>
     <div class="input-group date" data-provide="datepicker">
-      <input type="date" class="form-control">
-      <div class="input-group-addon">
-        <span class="glyphicon glyphicon-th"></span>
-      </div>
+
+      <ion-datetime placeholder="{{this.bod}}" display-format="DD/MM/YYYY" id="dat" [(ngModel)]="this.bod" ></ion-datetime>
+
     </div>
   </ion-item>
   <!-- 13 : end Date -->
 
-  <br>
+  <br />
   <!--  strat button save-->
-  <ion-item> 
+  <ion-item>
     <ion-grid>
-   <ion-row>
-      <!-- strat button back -->
-          <ion-col class="startp" align-items-start>
-          <ion-button type="submit" name="button" id="button_backlist" size="Default" color="medium" routerLink="/list">ย้อนกลับ</ion-button>
-          </ion-col>
-      <!-- strat button back -->
+      <ion-row>
+        <!-- strat button back -->
+        <ion-col class="startp" align-items-start>
+          <ion-button
+            type="submit"
+            name="button"
+            id="button_backlist"
+            size="Default"
+            color="medium"
+            routerLink="/list"
+            >ย้อนกลับ</ion-button
+          >
+        </ion-col>
+        <!-- strat button back -->
 
         <!-- strat button next -->
-          <ion-col col-12> </ion-col>
-          <ion-col col-12> </ion-col>
-          <ion-col class="startp" align-self-end>
-          <ion-button type="submit" name="button" id="button_nextreg" size="Default" color="primary" routerLink="/reg">ถัดไป</ion-button>
+        <ion-col col-12> </ion-col>
+        <ion-col col-12> </ion-col>
+        <ion-col class="startp" align-self-end>
+          <ion-button
+            type="submit"
+            name="button"
+            id="button_nextreg"
+            size="Default"
+            color="primary"
+            (click)="this.next()"
+            >ถัดไป</ion-button
+          >
         </ion-col>
         <!-- strat button next -->
       </ion-row>
     </ion-grid>
   </ion-item>
   <!--  end button save-->
-
 </ion-content>

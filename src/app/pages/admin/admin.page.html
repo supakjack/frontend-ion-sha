@@ -1,0 +1,151 @@
+<!-- strat ionic content -->
+<ion-content>
+  <br/>
+
+  <!-- strat ionic card -->
+  <ion-card>
+    <!-- strat header card -->
+    <ion-card-header>
+      <!-- start subtitle register -->
+      <ion-card color="success">
+        <ion-grid>
+          <ion-row justify-content-center align-items-end style="height:100%">        
+              <ion-label><b style="font-size: 18px;">จัดการหลักสูตร</b></ion-label>    
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <!-- end subtitle register -->
+    </ion-card-header>
+    
+
+    <ion-card-content>
+      <!-- strat icon doccument -->
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col>
+          <img style="width: 100px;" src="./../assets/icon/testt.png" />
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+      <!-- end icon doccument -->
+
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col class="startp">
+          <!-- strat button add -->
+          <ion-button id="button_add" routerLink="/setting"  color="success">
+            <ion-icon name="add-circle"> </ion-icon>
+            <ion-col col-12> </ion-col>
+            เมนูจัดการหลักสูตร
+          </ion-button>
+          <!-- end button add -->
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+    </ion-card-content>
+    <!-- end header card -->
+    <br/>
+  </ion-card>
+  <!-- end ionic card -->
+   
+  <!-- -------------02--------------------------------------------------- -->
+  <!-- strat ionic card -->
+  <ion-card>
+    <!-- strat header card -->
+    <ion-card-header>
+      <!-- start subtitle register -->
+      <ion-card color="tertiary">
+        <ion-grid>
+          <ion-row justify-content-center align-items-end style="height:100%">        
+              <ion-label><b style="font-size: 18px; ">จัดการใบสมัครเรียน</b></ion-label>    
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <!-- end subtitle register -->
+    </ion-card-header>
+    
+
+    <ion-card-content>
+      <!-- strat icon doccument -->
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col>
+          <img style="width: 100px;" src="./../assets/icon/document.png" />
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+      <!-- end icon doccument -->
+
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col class="startp" >
+          <!-- strat button add -->
+          <div>
+          <ion-button id="button_add" (click)="addStudent()" routerLink="/student" color="tertiary"   >
+            <ion-icon name="add-circle"> </ion-icon>
+            <ion-col col-12> </ion-col>
+            เมนูจัดการใบสมัครเรียน
+          </ion-button>
+          </div>
+          <!-- end button add -->
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+    </ion-card-content>
+    <!-- end header card -->
+    <br/>
+  </ion-card>
+  <!-- end ionic card -->
+
+
+
+  <!-- strat ionic card -->
+  <ion-card>
+    <!-- strat header card -->
+    <ion-card-header>
+      <!-- start subtitle register -->
+      <ion-card color="secondary">
+        <ion-grid>
+          <ion-row justify-content-center align-items-end style="height:100%">        
+              <ion-label><b style="font-size: 18px;">สมัครเรียน</b></ion-label>    
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <!-- end subtitle register -->
+    </ion-card-header>
+    
+
+    <ion-card-content>
+      <!-- strat icon doccument -->
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col>
+          <img style="width: 100px;" src="./../assets/icon/clipboard.png" />
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+      <!-- end icon doccument -->
+
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col class="startp">
+          <!-- strat button add -->
+          <ion-button id="button_add" (click)="addStudent()" routerLink="/end" color="secondary">
+            <ion-icon name="add-circle"> </ion-icon>
+            <ion-col col-12> </ion-col>
+            เมนูเพิ่มใบสมัครเรียน
+          </ion-button>
+          <!-- end button add -->
+        </ion-col>
+        <!-- end ionic col -->
+      </div>
+    </ion-card-content>
+    <!-- end header card -->
+    <br/>
+  </ion-card>
+  <!-- end ionic card -->
+   
+
+</ion-content>
+<!-- end ionic content -->
+

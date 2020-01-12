@@ -1,5 +1,12 @@
 
 <ion-content> <!-- เขียน tag นี้ก่อนในหน้าตัวเอง -->
+  <br />
+  <ion-button id="button_back" (click)="addStudent()" routerLink="/admin">
+    <ion-icon name="ios-arrow-back"> </ion-icon>
+    <ion-col col-12> </ion-col>
+     Back
+  </ion-button>
+  
   <ion-card>
     <ion-card-content class="item item-text-wrap">
       <canvas id="canvas-chart-bar"></canvas>

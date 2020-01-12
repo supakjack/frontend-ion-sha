@@ -1,175 +1,144 @@
-<ion-header>
-</ion-header>
+<ion-header> </ion-header>
 <ion-content>
+  <br />
+  <ion-button
+    id="button_back"
+    (click)="addStudent()"
+    routerLink="/setting"
+    color="medium"
+  >
+    <ion-icon name="ios-arrow-back"> </ion-icon>
+    <ion-col col-12> </ion-col>
+    ย้อนกลับ
+  </ion-button>
+
+  <!-- strat ionic card -->
   <ion-card>
-  <ion-card color="primary">
-        <ion-grid>
-          <ion-row justify-content-center align-items-end style="height:100%">
-              <ion-label><b style="font-size: medium;">ระดับชั้นเตรียมอนุบาล</b></ion-label>
-          </ion-row>
-        </ion-grid>
-      </ion-card>
+    <br />
+    <ion-card style="background-color:darkorange; color: #FFFF;">
+      <ion-grid>
+        <ion-row justify-content-center align-items-end style="height:100%">
+          <ion-label><b style="font-size: medium;">แก้ไขหลักสูตร</b></ion-label>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
     <ion-card-content>
-      <ion-item>
-          <ion-label>วันที่เปิดรับสมัครเรียน</ion-label>
+      <ion-grid>
+        <ion-item>
+          วันที่เปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
           <div class="input-group date" data-provide="datepicker">
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" />
             <div class="input-group-addon">
               <span class="glyphicon glyphicon-th"></span>
             </div>
           </div>
-        </ion-item><br>
-      <ion-item>
-          <ion-label>วันที่ปิดรับสมัครเรียน</ion-label>
+        </ion-item> </ion-grid
+      ><br />
+
+      <ion-grid>
+        <ion-item>
+          วันที่ปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
           <div class="input-group date" data-provide="datepicker">
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" />
             <div class="input-group-addon">
               <span class="glyphicon glyphicon-th"></span>
             </div>
           </div>
-        </ion-item>
+        </ion-item> </ion-grid
+      ><br />
+
+      <ion-grid>
+        <ion-item>
+          หลักสูตรที่เปิดรับ
+          <ion-col col-12> </ion-col>
+          <div class="input-group-addon">
+            <ion-label floating>หลักสูตรภาษาไทย</ion-label>
+          </div>
+        </ion-item> </ion-grid
+      ><br />
+
+      <ion-grid>
+        <ion-item>
+            <ion-label floating>จำนวนที่เปิดรับ</ion-label>
+            <ion-input type="text"></ion-input>
+            <ion-label floating>คน</ion-label>
+            
+        </ion-item> </ion-grid
+      ><br />
+
+      <ion-grid>
+        <ion-item>
+            <ion-label floating>จำนวนคนที่สมัคร</ion-label>
+            <ion-input type="text"></ion-input>
+            <ion-label floating>คน</ion-label>
+            
+        </ion-item> </ion-grid
+      ><br />
+
+      <ion-grid>
+        <ion-item>
+          ตำนวนที่สมัคร
+          <ion-col col-12> </ion-col>
+          <div class="input-group date" data-provide="datepicker">
+            <input type="date" class="form-control" />
+            <div class="input-group-addon">
+              <span class="glyphicon glyphicon-th"></span>
+            </div>
+          </div>
+        </ion-item> </ion-grid
+      ><br />
+
+      <ion-grid>
+        <ion-item>
+          วันที่เปิดรับสมัครเรียน
+          <ion-col col-12> </ion-col>
+          <div class="input-group date" data-provide="datepicker">
+            <input type="date" class="form-control" />
+            <div class="input-group-addon">
+              <span class="glyphicon glyphicon-th"></span>
+            </div>
+          </div>
+        </ion-item> </ion-grid
+      ><br />
     </ion-card-content>
-  <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
-  <ion-item>
+    <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
+    <ion-item>
       <ion-label floating>ภาษาไทย</ion-label>
       <ion-input type="text"></ion-input>
       <ion-label floating>คน</ion-label>
     </ion-item>
     <ion-item>
-        <ion-label floating>ภาษาอังกฤษ</ion-label>
-        <ion-input type="text"></ion-input>
-        <ion-label floating>คน</ion-label>
-      </ion-item>
-      <ion-item>
-      <ion-label floating>สองภาษา (ไทย+อังกฤษ)</ion-label>
+      <ion-label floating>ภาษาอังกฤษ</ion-label>
       <ion-input type="text"></ion-input>
       <ion-label floating>คน</ion-label>
     </ion-item>
     <ion-item>
-        <ion-label floating>จำนวนที่เปิดรับสมัคร</ion-label>
-        <ion-input type="text"></ion-input>
-        <ion-label floating>คน</ion-label>
-      </ion-item>
-      <ion-item>
-          <ion-grid>
-            <ion-row justify-content-center align-items-end style="height:100%">
-                <ion-button type="submit" name="button" id="button" size="Default" color="success" routerLink="/setting">บันทึก</ion-button>
-              </ion-row>
-          </ion-grid>
-        </ion-item>
+      <ion-label floating>สองภาษา</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label floating>คน</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>จำนวนที่เปิดรับ</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label floating>คน</ion-label>
+    </ion-item>
+    <br />
+
+    <ion-grid>
+      <ion-row justify-content-center align-items-end style="height:100%">
+        <ion-button
+          type="submit"
+          name="button"
+          id="button"
+          size="Default"
+          color="success"
+          routerLink="/setting"
+          >บันทึก</ion-button
+        >
+      </ion-row>
+    </ion-grid>
+    <br />
   </ion-card>
-  <ion-card>
-      <ion-card color="primary">
-            <ion-grid>
-              <ion-row justify-content-center align-items-end style="height:100%">
-                  <ion-label><b style="font-size: medium;">ระดับชั้นอนุบาล</b></ion-label>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
-        <ion-card-content>
-          <ion-item>
-              <ion-label>วันที่เปิดรับสมัครเรียน</ion-label>
-              <div class="input-group date" data-provide="datepicker">
-                <input type="date" class="form-control">
-                <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-th"></span>
-                </div>
-              </div>
-            </ion-item><br>
-          <ion-item>
-              <ion-label>วันที่ปิดรับสมัครเรียน</ion-label>
-              <div class="input-group date" data-provide="datepicker">
-                <input type="date" class="form-control">
-                <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-th"></span>
-                </div>
-              </div>
-            </ion-item>
-        </ion-card-content>
-      <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
-      <ion-item>
-          <ion-label floating>ภาษาไทย</ion-label>
-          <ion-input type="text"></ion-input>
-          <ion-label floating>คน</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>ภาษาอังกฤษ</ion-label>
-            <ion-input type="text"></ion-input>
-            <ion-label floating>คน</ion-label>
-          </ion-item>
-          <ion-item>
-          <ion-label floating>สองภาษา (ไทย+อังกฤษ)</ion-label>
-          <ion-input type="text"></ion-input>
-          <ion-label floating>คน</ion-label>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>จำนวนที่เปิดรับสมัคร</ion-label>
-            <ion-input type="text"></ion-input>
-            <ion-label floating>คน</ion-label>
-          </ion-item>
-          <ion-item>
-              <ion-grid>
-                <ion-row justify-content-center align-items-end style="height:100%">
-                    <ion-button type="submit" name="button" id="button" size="Default" color="success" routerLink="/setting">บันทึก</ion-button>
-                  </ion-row>
-              </ion-grid>
-            </ion-item>
-      </ion-card>
-      <ion-card>
-          <ion-card color="primary">
-                <ion-grid>
-                  <ion-row justify-content-center align-items-end style="height:100%">
-                      <ion-label><b style="font-size: medium;">ระดับชั้นประถม</b></ion-label>
-                  </ion-row>
-                </ion-grid>
-              </ion-card>
-            <ion-card-content>
-              <ion-item>
-                  <ion-label>วันที่เปิดรับสมัครเรียน</ion-label>
-                  <div class="input-group date" data-provide="datepicker">
-                    <input type="date" class="form-control">
-                    <div class="input-group-addon">
-                      <span class="glyphicon glyphicon-th"></span>
-                    </div>
-                  </div>
-                </ion-item><br>
-              <ion-item>
-                  <ion-label>วันที่ปิดรับสมัครเรียน</ion-label>
-                  <div class="input-group date" data-provide="datepicker">
-                    <input type="date" class="form-control">
-                    <div class="input-group-addon">
-                      <span class="glyphicon glyphicon-th"></span>
-                    </div>
-                  </div>
-                </ion-item>
-            </ion-card-content>
-          <h3 style="text-align: center;">หลักสูตรที่เปิดรับ</h3>
-          <ion-item>
-              <ion-label floating>ภาษาไทย</ion-label>
-              <ion-input type="text"></ion-input>
-              <ion-label floating>คน</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label floating>ภาษาอังกฤษ</ion-label>
-                <ion-input type="text"></ion-input>
-                <ion-label floating>คน</ion-label>
-              </ion-item>
-              <ion-item>
-              <ion-label floating>สองภาษา (ไทย+อังกฤษ)</ion-label>
-              <ion-input type="text"></ion-input>
-              <ion-label floating>คน</ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-label floating>จำนวนที่เปิดรับสมัคร</ion-label>
-                <ion-input type="text"></ion-input>
-                <ion-label floating>คน</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-grid>
-                    <ion-row justify-content-center align-items-end style="height:100%">
-                        <ion-button type="submit" name="button" id="button" size="Default" color="success" routerLink="/setting">บันทึก</ion-button>
-                      </ion-row>
-                  </ion-grid>
-                </ion-item>
-          </ion-card>
 </ion-content>

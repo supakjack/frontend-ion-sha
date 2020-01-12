@@ -4,7 +4,7 @@
   <ion-button id="button_back" (click)="addStudent()" routerLink="/list">
     <ion-icon name="ios-arrow-back"> </ion-icon>
     <ion-col col-12> </ion-col>
-     Back
+    Back
   </ion-button>
   <!-- strat ionic card -->
   <ion-card>
@@ -28,106 +28,49 @@
     <!-- end header card -->
 
     <!-- card 01 เตรียมอนุบาล -->
-    <div align="center">
+    <div
+      align="center"
+      *ngFor="let itemHeadNews of this.headNews; let i = index"
+    >
       <!-- strat ionic col -->
       <ion-col class="startp">
         <!-- strat button add -->
-        <ion-button id="button_kindergarten">
+        <ion-button (click)="btnToggle(i)" id="button_kindergarten">
           <ion-icon name="add-circle"> </ion-icon>
           <ion-col col-12> </ion-col>
-          หลักสูตรเตรียมอนุบาล
+          หลักสูตร{{itemHeadNews.name}}
         </ion-button>
         <!-- end button add -->
 
         <!-- strat card news หลักสูตรเตรียมอนุบาล -->
       </ion-col>
-      <ion-card>
+      <ion-card *ngIf="this.buttonNews[i]">
         <ion-card-content>
           <ion-text>
             <br />
-            <h5 style="color: black;">เตรียมอนุบาล 1 รอบที่ 1</h5>
-            <p>รับสมัครตั้งแต่ 30 พฤษภาคม พ.ศ. 2563 ถึง 30 กันยายน พ.ศ. 2563</p>
-            <br />
-            <h5 style="color: black;">เตรียมอนุบาล 1 รอบที่ 2</h5>
-            <p>รับสมัครตั้งแต่ 30 ตุลาคม พ.ศ. 2563 ถึง 30 ธันวาคม พ.ศ. 2563</p>
-            <br />
+            <div *ngFor="let itemBodyNews of this.bodyNews[i]; let j = index">
+              <h5 style="color: black;">
+                {{itemBodyNews.edu}} {{itemBodyNews.class_title}} รอบที่
+                {{itemBodyNews.round}}
+              </h5>
+              <p>
+                รับสมัครตั้งแต่ {{itemBodyNews.start}} ถึง {{itemBodyNews.end}}
+              </p>
+              <br />
+            </div>
           </ion-text>
         </ion-card-content>
       </ion-card>
       <!-- end card news หลักสูตรเตรียมอนุบาล -->
     </div>
     <br />
-    <!-- card 01 เตรียมอนุบาล -->
 
-    <!-- card 02 อนุบาล -->
-    <div align="center">
-      <!-- strat ionic col -->
-      <ion-col class="startp">
-        <!-- strat button add -->
-        <ion-button id="button_curator">
-          <ion-icon name="add-circle"> </ion-icon>
-          <ion-col col-12> </ion-col>
-             หลักสูตรอนุบาล
-          <ion-col col-12> </ion-col>
-          <ion-col col-12> </ion-col>
-          <ion-col col-12> </ion-col>
-          <ion-col col-12> </ion-col>
-        </ion-button>
-        <!-- end button add -->
-      </ion-col>
-      <!-- end ionic col -->
-      <!-- strat card news หลักสูตรอนุบาล -->
-      <ion-card>
-        <ion-card-content>
-          <ion-text>
-            <br />
-            <h5 style="color: black;">อนุบาล 1 รอบที่ 1</h5>
-            <p>รับสมัครตั้งแต่ 30 พฤษภาคม พ.ศ. 2563 ถึง 30 กันยายน พ.ศ. 2563</p>
-            <br />
-            <h5 style="color: black;">อนุบาล 1 รอบที่ 2</h5>
-            <p>รับสมัครตั้งแต่ 30 ตุลาคม พ.ศ. 2563 ถึง 30 ธันวาคม พ.ศ. 2563</p>
-            <br />
-          </ion-text>
-        </ion-card-content>
-      </ion-card>
-      <!-- end card news หลักสูตรอนุบาล -->
-    </div>
-    <br />
-    <!-- card 02 อนุบาล -->
-
-    <!-- card 03 ประถมศึกษา -->
-    <div align="center">
-      <!-- strat ionic col -->
-      <ion-col class="startp">
-        <!-- strat button add -->
-        <ion-button id="button_Primary">
-          <ion-icon name="add-circle"> </ion-icon>
-          <ion-col col-12> </ion-col>
-          หลักสูตรประถมศึกษา
-          <ion-col col-12> </ion-col>
-        </ion-button>
-        <!-- end button add -->
-      </ion-col>
-      <!-- end ionic col -->
-      <!-- strat card news หลักสูตรประถมศึกษา -->
-      <ion-card>
-        <ion-card-content>
-          <ion-text>
-            <br />
+    <!-- <br />
             <h5 style="color: black;">ประถมศึกษา 1 รอบที่ 1</h5>
             <p>รับสมัครตั้งแต่ 30 พฤษภาคม พ.ศ. 2563 ถึง 30 กันยายน พ.ศ. 2563</p>
             <br />
             <h5 style="color: black;">ประถมศึกษา 1 รอบที่ 2</h5>
-            <p>รับสมัครตั้งแต่ 30 ตุลาคม พ.ศ. 2563 ถึง 30 ธันวาคม พ.ศ. 2563</p>
-            <br />
-          </ion-text>
-        </ion-card-content>
-      </ion-card>
-      <!-- end card news หลักสูตรประถมศึกษา -->
-    </div>
-    <br />
-    <!-- card 03 ประถมศึกษา -->
-    
+            <p>รับสมัครตั้งแต่ 30 ตุลาคม พ.ศ. 2563 ถึง 30 ธันวาคม พ.ศ. 2563</p> -->
   </ion-card>
   <!-- end ionic card -->
 </ion-content>
