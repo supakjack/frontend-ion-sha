@@ -1,10 +1,15 @@
 <!-- strat ionic content -->
 <ion-content>
   <br />
-  <ion-button id="button_back" (click)="this.ngOnInit()" routerLink="/list">
+  <ion-button
+    color="medium"
+    id="button_back"
+    (click)="this.ngOnInit()"
+    routerLink="/list"
+  >
     <ion-icon name="ios-arrow-back"> </ion-icon>
     <ion-col col-12> </ion-col>
-    Back
+    ย้อนกลับ
   </ion-button>
   <!-- strat ionic card -->
   <ion-card>
@@ -27,41 +32,43 @@
     </ion-card-content>
     <!-- end header card -->
 
-    <!-- card 01 เตรียมอนุบาล -->
-    <div
-      align="center"
-      *ngFor="let itemHeadNews of this.headNews; let i = index"
-    >
-      <!-- strat ionic col -->
-      <ion-col class="startp">
-        <!-- strat button add -->
-        <ion-button (click)="btnToggle(i)" id="button_kindergarten">
-          <ion-icon name="add-circle"> </ion-icon>
-          <ion-col col-12> </ion-col>
-          หลักสูตร{{itemHeadNews.name}}
-        </ion-button>
-        <!-- end button add -->
+    <div *ngFor="let itemHeadNews of this.headNews; let i = index">
+      <!-- card 01 เตรียมอนุบาล -->
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col class="startp">
+          <!-- strat button add -->
+          <ion-button (click)="btnToggle(i)" id="button_kindergarten">
+            <ion-icon name="add-circle"> </ion-icon>
+            <ion-col col-12> </ion-col>
+            หลักสูตร{{itemHeadNews.name}}
+          </ion-button>
+          <!-- end button add -->
 
-        <!-- strat card news หลักสูตรเตรียมอนุบาล -->
-      </ion-col>
-      <ion-card *ngIf="this.buttonNews[i]">
-        <ion-card-content>
-          <ion-text>
-            <br />
-            <div *ngFor="let itemBodyNews of this.bodyNews[i]; let j = index">
-              <h5 style="color: black;">
-                {{itemBodyNews.edu}} {{itemBodyNews.class_title}} รอบที่
-                {{itemBodyNews.round}}
-              </h5>
-              <p>
-                รับสมัครตั้งแต่ {{itemBodyNews.start}} ถึง {{itemBodyNews.end}}
-              </p>
+          <!-- strat card news หลักสูตรเตรียมอนุบาล -->
+        </ion-col>
+        <ion-card *ngIf="this.buttonNews[i]">
+          <ion-card-content>
+            <ion-text>
               <br />
-            </div>
-          </ion-text>
-        </ion-card-content>
-      </ion-card>
-      <!-- end card news หลักสูตรเตรียมอนุบาล -->
+              <div *ngFor="let itemBodyNews of this.bodyNews[i]; let j = index">
+                <h5 style="color: black;">
+                  {{itemBodyNews.edu}} {{itemBodyNews.class_title}} รอบที่
+                  {{itemBodyNews.round}}
+                </h5>
+                <p>
+                  รับสมัครตั้งแต่ {{itemBodyNews.start}} ถึง
+                  {{itemBodyNews.end}}
+                </p>
+                <br />
+              </div>
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+        <!-- end card news หลักสูตรเตรียมอนุบาล -->
+        <br />
+        <br />
+      </div>
     </div>
     <br />
 

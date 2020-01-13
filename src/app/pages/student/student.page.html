@@ -1,10 +1,10 @@
 <!-- strat ionic content -->
 <ion-content>
   <br />
-  <ion-button id="button_back" routerLink="/admin">
+  <ion-button color="medium" id="button_back" routerLink="/admin">
     <ion-icon name="ios-arrow-back"> </ion-icon>
     <ion-col col-12> </ion-col>
-     Back
+    ย้อนกลับ
   </ion-button>
   <!-- strat ionic card -->
   <ion-card>
@@ -24,23 +24,30 @@
     </ion-card-content>
     <!-- end header card -->
 
-    <!-- card 01 เตรียมอนุบาล -->
-    <div *ngFor="let crouse of this.crouses" align="center">
-      <!-- strat ionic col -->
-      <ion-col class="startp">
-        <!-- strat button add -->
-        <ion-button id="button_kindergarten" (click)="clickCourse(crouse.edl_id)">
-          <ion-icon name="add-circle"> </ion-icon>
-          <ion-col col-12> </ion-col>
-          ระดับชั้น{{crouse.edl_name}}
-        </ion-button>
-        <!-- end button add -->
-      </ion-col>
+    <div *ngFor="let crouse of this.crouses">
+      <!-- card 01 เตรียมอนุบาล -->
+      <div align="center">
+        <!-- strat ionic col -->
+        <ion-col class="startp">
+          <!-- strat button add -->
+          <ion-button
+            id="button_kindergarten"
+            (click)="clickCourse(crouse.edl_id)"
+          >
+            <ion-icon name="add-circle"> </ion-icon>
+            <ion-col col-12> </ion-col>
+            ระดับชั้น{{crouse.edl_name}}
+          </ion-button>
+          <!-- end button add -->
+        </ion-col>
+        <br />
+      </div>
       <br />
+      <br />
+      <!-- card 01 เตรียมอนุบาล -->
     </div>
-    <!-- card 01 เตรียมอนุบาล -->
-    
   </ion-card>
+
   <!-- end ionic card -->
 </ion-content>
 <!-- end ionic content -->
