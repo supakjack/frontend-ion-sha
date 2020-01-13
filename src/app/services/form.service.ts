@@ -71,7 +71,7 @@ export class FormService {
   }
 
   getLastIdApp(id) {
-    console.log("id : "+id)
+    console.log('id : ' + id);
     return this.http.get<any[]>(`${this.urlApp}/last/${id}`);
   }
 
@@ -79,15 +79,41 @@ export class FormService {
     return this.http.get<any[]>(`${this.urlPro}/last`);
   }
 
-
-  addStudentTab(
-    stt_pro_id,
-    stt_app_id,
-  ) {
+  addStudentTab(stt_pro_id, stt_app_id) {
     return this.http.post<any[]>(this.urlStudentTab, {
       stt_pro_id: stt_pro_id,
-      stt_app_id: stt_app_id,
+      stt_app_id: stt_app_id
     });
   }
 
+  updateProfileTab(
+    pro_first_th_name,
+    pro_last_th_name,
+    pro_first_en_name,
+    pro_last_en_name,
+    pro_id_card,
+    pro_race,
+    pro_bod,
+    pro_nation_id,
+    pro_blood_id,
+    pro_prefix_id,
+    pro_province_id,
+    pro_religion_id,
+    id
+  ) {
+    return this.http.put<any[]>(`${this.urlPro}/${id}`, {
+      pro_first_th_name: pro_first_th_name,
+      pro_last_th_name: pro_last_th_name,
+      pro_first_en_name: pro_first_en_name,
+      pro_last_en_name: pro_last_en_name,
+      pro_id_card: pro_id_card,
+      pro_race: pro_race,
+      pro_bod: pro_bod,
+      pro_nation_id: pro_nation_id,
+      pro_blood_id: pro_blood_id,
+      pro_prefix_id: pro_prefix_id,
+      pro_province_id: pro_province_id,
+      pro_religion_id: pro_religion_id
+    });
+  }
 }

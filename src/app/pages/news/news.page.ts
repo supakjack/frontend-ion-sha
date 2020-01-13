@@ -14,13 +14,20 @@ import * as $ from 'jquery';
 export class NewsPage implements OnInit {
   public headNews: any = [];
   public bodyNews: any = [];
-  public buttonNews: any=[];
+  public buttonNews: any = [];
 
   constructor(
     private newsService: NewsService,
     private sessionService: SessionService,
     private libsService: LibsService
-  ) {}
+  ) {
+    setInterval(() => {
+      if (this.sessionService.reState) {
+        this.ngOnInit();
+        this.sessionService.reState = false;
+      }
+    }, 500);
+  }
 
   ngOnInit() {
     this.headNews = null;
@@ -44,8 +51,8 @@ export class NewsPage implements OnInit {
     });
   }
 
-  public btnToggle(index){
-    this.buttonNews[index] = !this.buttonNews[index] 
+  public btnToggle(index) {
+    this.buttonNews[index] = !this.buttonNews[index];
   }
 
   public getBodyNews() {

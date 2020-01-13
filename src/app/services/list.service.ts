@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
 export class ListService {
   url = 'http://localhost:3000/list';
   urlApp = 'http://localhost:3000/app';
+  urlReg = 'http://localhost:3000/reg';
   apiKey = '';
   public lists: any = [];
 
@@ -27,6 +28,19 @@ export class ListService {
   updateFailApp(id) {
     return this.http.patch<any[]>(`${this.urlApp}/fail/${id}`, {
       app_sta_id: '3'
+    });
+  }
+  updateCancelApp(id) {
+    return this.http.patch<any[]>(`${this.urlApp}/cancel/${id}`, {
+      app_sta_id: '5'
+    });
+  }
+  getAppTab1ById(id) {
+    return this.http.get<any[]>(`${this.urlApp}/tab1/${id}`);
+  }
+  addCountReg(id) {
+    return this.http.put<any[]>(`${this.urlReg}/count/`, {
+      reg_id: id
     });
   }
 }

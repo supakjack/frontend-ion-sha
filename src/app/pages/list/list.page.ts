@@ -52,6 +52,20 @@ export class ListPage implements OnInit {
     this.lists = [];
   }
 
+  public clickDel(id) {
+    this.listService.updateCancelApp(id).subscribe(res => {
+      console.log(res);
+      this.sessionService.reState = true;
+      this.ngOnInit();
+    });
+  }
+
+  public clickEdit(id) {
+    this.sessionService.setAppId(id);
+    this.sessionService.editTab=true;
+    this.router.navigate(['/end']);
+  }
+
   public getColor(status_id) {
     switch (status_id) {
       case 1:

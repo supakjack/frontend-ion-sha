@@ -35,6 +35,7 @@
     <ion-label>คำนำหน้าชื่อ</ion-label>
     <ion-select
       [(ngModel)]="this.pfId"
+      #select
       interface="popover"
       placeholder="กรุณาเลือก"
     >
@@ -94,6 +95,7 @@
     <ion-label>จังหวัดที่เกิด</ion-label>
     <ion-select
       [(ngModel)]="this.pvId"
+      #select
       interface="popover"
       placeholder="กรุณาเลือก"
     >
@@ -113,6 +115,7 @@
     <ion-label>สัญชาติ</ion-label>
     <ion-select
       [(ngModel)]="this.naId"
+      #select
       interface="popover"
       placeholder="กรุณาเลือก"
     >
@@ -140,6 +143,7 @@
     <ion-label>กรุ๊ปเลือด</ion-label>
     <ion-select
       [(ngModel)]="this.bl"
+      #select
       interface="popover"
       placeholder="กรุณาเลือก"
     >
@@ -161,6 +165,7 @@
       [(ngModel)]="this.re"
       interface="popover"
       placeholder="กรุณาเลือก"
+      #select
     >
       <ion-select-option
         *ngFor="let reli of this.relis; let i = index"
@@ -177,9 +182,12 @@
   <ion-item>
     <ion-label>วัน/เดือน/ปีเกิด</ion-label>
     <div class="input-group date" data-provide="datepicker">
-
-      <ion-datetime placeholder="{{this.bod}}" display-format="DD/MM/YYYY" id="dat" [(ngModel)]="this.bod" ></ion-datetime>
-
+      <ion-datetime
+        placeholder="{{this.bod}}"
+        display-format="DD/MM/YYYY"
+        id="dat"
+        [(ngModel)]="this.bod"
+      ></ion-datetime>
     </div>
   </ion-item>
   <!-- 13 : end Date -->
@@ -197,7 +205,7 @@
             id="button_backlist"
             size="Default"
             color="medium"
-            routerLink="/list"
+            (click)="btnBack()"
             >ย้อนกลับ</ion-button
           >
         </ion-col>

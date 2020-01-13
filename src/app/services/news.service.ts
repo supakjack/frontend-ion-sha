@@ -9,10 +9,14 @@ import { map } from 'rxjs/operators';
 export class NewsService {
   url = 'http://localhost:3000/news';
   urlEdu = 'http://localhost:3000/edl';
+  urlReg = 'http://localhost:3000/reg';
   apiKey = '';
   constructor(private http: HttpClient) {}
   getAllGoup() {
     return this.http.get<any[]>(`${this.url}/open`);
+  }
+  getBarReport() {
+    return this.http.get<any[]>(`${this.urlReg}/bar`);
   }
   getAllOpen() {
     return this.http.get<any[]>(`${this.url}`);

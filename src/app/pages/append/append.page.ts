@@ -49,6 +49,7 @@ export class AppendPage implements OnInit {
     this.listService.updatePassApp(id).subscribe(res => {
       console.log(res);
       this.sessionService.reState = true;
+      this.ngOnInit()
     });
   }
 
@@ -56,6 +57,7 @@ export class AppendPage implements OnInit {
     this.listService.updateFailApp(id).subscribe(res => {
       console.log(res);
       this.sessionService.reState = true;
+      this.ngOnInit()
     });
   }
 
