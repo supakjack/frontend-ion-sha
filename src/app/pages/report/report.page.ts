@@ -20,7 +20,8 @@ export class ReportPage implements OnInit {
   constructor(
     private newsService: NewsService,
     private sessionService: SessionService,
-    private libsService: LibsService
+    private libsService: LibsService,
+    private router: Router
   ) {
     setInterval(() => {
       if (this.sessionService.reState) {
@@ -49,6 +50,14 @@ export class ReportPage implements OnInit {
       this.mycharts();
       this.barcharts();
     });
+  }
+
+  back() {
+    if (this.sessionService.status == '1') {
+      this.router.navigate(['/list']);
+    } else if (this.sessionService.status == '2') {
+      this.router.navigate(['/admin']);
+    }
   }
 
   mycharts() {
