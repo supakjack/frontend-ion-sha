@@ -50,6 +50,11 @@ export class FilterPage implements OnInit {
     });
   }
 
+  clickBack() {
+    this.sessionService.reState = true;
+    this.router.navigate(['/setting']);
+  }
+
   clickSave() {
     this.sessionService.reState = true;
     this.newsService
